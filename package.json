@@ -1,0 +1,24 @@
+{
+  "name": "slide-buddy-website",
+  "version": "1.0.0",
+  "description": "Official website for Slide Buddy - AI-Powered Google Slides Translation & Text Management add-on",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Static site - no build needed'",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": [
+    "google-slides",
+    "translation",
+    "ai",
+    "productivity",
+    "add-on"
+  ],
+  "author": "TomMcLan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TomMcLan/slide-buddy-website.git"
+  }
+}

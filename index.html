@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Buddy - AI-Powered Google Slides Translation & Text Management</title>
+    <meta name="description" content="Translate entire presentations in one minute. Free Google Slides add-on powered by AI. No subscription fees, 30+ languages supported.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">🤖 Slide Buddy</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#demo">Demo</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#setup">Setup</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <span class="hero-logo-text">🤖</span>
+                </div>
+                <h1 class="hero-title">
+                    Translate All Your<br>
+                    Slides in One Minute<br>
+                    <span class="highlight">→ One Minute <span class="clock-icon">⏰</span></span>
+                </h1>
+                <p class="hero-subtitle">
+                    AI-powered Google Slides add-on that translates entire presentations instantly.<br>
+                    <strong>100% FREE</strong> - No subscription, no hidden fees.
+                </p>
+                
+                <!-- CTA Button Placeholder -->
+                <div class="cta-container">
+                    <button class="cta-button" id="marketplace-btn">
+                        <span class="cta-text">Try it for Free now</span>
+                        <span class="cta-gradient"></span>
+                    </button>
+                    <p class="cta-note">Install from Google Workspace Marketplace</p>
+                </div>
+
+                <!-- Key Stats -->
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">5 sec</span>
+                        <span class="stat-label">Full presentation</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Languages</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section class="demo-section" id="demo">
+        <div class="container">
+            <h2 class="section-title">See It In Action</h2>
+            <div class="demo-container">
+                <!-- Video Placeholder - You can upload your demo video here -->
+                <div class="video-placeholder" id="demo-video-container">
+                    <div class="video-upload-area">
+                        <div class="upload-icon">📹</div>
+                        <h3>Demo Video Coming Soon</h3>
+                        <p>Upload your demo video to showcase Slide Buddy in action</p>
+                        <button class="upload-btn" onclick="uploadDemoVideo()">Upload Demo Video</button>
+                    </div>
+                    <!-- Replace above with actual video when ready:
+                    <video controls poster="assets/demo-thumbnail.jpg">
+                        <source src="assets/slide-buddy-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Slide Buddy?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Context-Aware Translation</h3>
+                    <p>Understands exactly what you want to translate - selected text, current slide, or entire presentation.</p>
+                    <ul>
+                        <li>30+ languages supported</li>
+                        <li>Native language commands</li>
+                        <li>Professional quality</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Translate entire presentations in seconds, not hours.</p>
+                    <ul>
+                        <li>50 slides in ~5 seconds</li>
+                        <li>Single slide in <1 second</li>
+                        <li>Powered by Gemini 2.5 Flash</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Smart Find & Replace</h3>
+                    <p>Bulk text replacement across your entire presentation with natural language.</p>
+                    <ul>
+                        <li>Natural language commands</li>
+                        <li>Instant across all slides</li>
+                        <li>Perfect for rebranding</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>100% Free</h3>
+                    <p>No subscription fees, no hidden costs. You only pay for your own API usage.</p>
+                    <ul>
+                        <li>Free add-on forever</li>
+                        <li>~$0.01-$0.03 per presentation</li>
+                        <li>Built-in cost tracking</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>AI-Powered Intelligence</h3>
+                    <p>Remembers context and responds to natural language in any language.</p>
+                    <ul>
+                        <li>Conversation memory</li>
+                        <li>Context preservation</li>
+                        <li>Intent understanding</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacy & Security</h3>
+                    <p>No data storage, secure Google OAuth, you control your API keys.</p>
+                    <ul>
+                        <li>No persistent logs</li>
+                        <li>Real-time processing</li>
+                        <li>Google OAuth security</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Slide Buddy Add-on</h3>
+                    <div class="price">
+                        <span class="price-amount">FREE</span>
+                        <span class="price-period">Forever</span>
+                    </div>
+                </div>
+                <div class="pricing-features">
+                    <div class="pricing-feature">✅ Unlimited translations</div>
+                    <div class="pricing-feature">✅ All 30+ languages</div>
+                    <div class="pricing-feature">✅ Find & replace</div>
+                    <div class="pricing-feature">✅ Context awareness</div>
+                    <div class="pricing-feature">✅ Cost tracking</div>
+                    <div class="pricing-feature">✅ No subscription needed</div>
+                </div>
+                <div class="pricing-note">
+                    <strong>Google Gemini API:</strong> Pay-as-you-go (~$0.01-$0.03 per presentation)<br>
+                    <em>Free tier includes 15 requests/minute</em>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setup Section -->
+    <section class="setup-section" id="setup">
+        <div class="container">
+            <h2 class="section-title">Quick Setup (2 Minutes)</h2>
+            <div class="setup-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Install from Marketplace</h3>
+                        <p>Search "Slide Buddy" in Google Workspace Marketplace</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Get Free API Key</h3>
+                        <p>Visit <a href="https://ai.google.dev" target="_blank">ai.google.dev</a> for free Gemini API key</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Add API Key</h3>
+                        <p>Extensions → Apps Script → Add GEMINI_API_KEY</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Start Translating</h3>
+                        <p>Open Slide Buddy sidebar and type "translate to Spanish"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>🤖 Slide Buddy</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/TomMcLan/slide-buddy-apps-script" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Documentation</a>
+                    <a href="#" target="_blank">Support</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Slide Buddy. Making multilingual presentations effortless and FREE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
