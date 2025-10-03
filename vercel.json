@@ -5,14 +5,9 @@
   "devCommand": "python -m http.server 8000",
   "installCommand": "echo 'No dependencies to install'",
   "framework": null,
-  "functions": {
-    "assets/video/**": {
-      "maxDuration": 30
-    }
-  },
   "headers": [
     {
-      "source": "/assets/video/(.*)",
+      "source": "/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
