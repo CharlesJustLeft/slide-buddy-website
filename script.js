@@ -1,5 +1,65 @@
 // Modern Google-style JavaScript with enhanced functionality
 
+// Video player functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('demo-video');
+    const overlay = document.getElementById('video-overlay');
+    
+    if (video && overlay) {
+        // Hide overlay when video starts playing
+        video.addEventListener('play', () => {
+            overlay.style.opacity = '0';
+            overlay.style.pointerEvents = 'none';
+        });
+        
+        // Show overlay when video is paused or ended
+        video.addEventListener('pause', () => {
+            overlay.style.opacity = '1';
+            overlay.style.pointerEvents = 'auto';
+        });
+        
+        video.addEventListener('ended', () => {
+            overlay.style.opacity = '1';
+            overlay.style.pointerEvents = 'auto';
+        });
+        
+        // Click overlay to play video
+        overlay.addEventListener('click', () => {
+            video.play();
+            trackEvent('Video', 'play', 'Demo Video');
+        });
+        
+        // Track video engagement
+        video.addEventListener('loadstart', () => {
+            trackEvent('Video', 'load_start', 'Demo Video');
+        });
+        
+        video.addEventListener('loadedmetadata', () => {
+            trackEvent('Video', 'metadata_loaded', 'Demo Video');
+        });
+        
+        video.addEventListener('timeupdate', () => {
+            const progress = (video.currentTime / video.duration) * 100;
+            if (progress >= 25 && !video.dataset.tracked25) {
+                trackEvent('Video', 'progress_25', 'Demo Video');
+                video.dataset.tracked25 = 'true';
+            }
+            if (progress >= 50 && !video.dataset.tracked50) {
+                trackEvent('Video', 'progress_50', 'Demo Video');
+                video.dataset.tracked50 = 'true';
+            }
+            if (progress >= 75 && !video.dataset.tracked75) {
+                trackEvent('Video', 'progress_75', 'Demo Video');
+                video.dataset.tracked75 = 'true';
+            }
+        });
+        
+        video.addEventListener('ended', () => {
+            trackEvent('Video', 'completed', 'Demo Video');
+        });
+    }
+});
+
 // Marketplace button click handler
 document.getElementById('marketplace-btn').addEventListener('click', function() {
     // Add loading state
@@ -165,16 +225,28 @@ document.querySelectorAll('img').forEach(img => {
     });
 });
 
-// Analytics event tracking (placeholder)
-function trackEvent(category, action, label) {
-    // Replace with your analytics implementation
-    console.log('Event tracked:', { category, action, label });
+// Analytics event tracking with Vercel Analytics integration
+function trackEvent(category, action, label, value) {
+    // Vercel Analytics tracking
+    if (window.va) {
+        window.va('track', action, {
+            category: category,
+            label: label,
+            value: value
+        });
+    }
     
-    // Example for Google Analytics 4:
-    // gtag('event', action, {
-    //     event_category: category,
-    //     event_label: label
-    // });
+    // Console log for debugging
+    console.log('Event tracked:', { category, action, label, value });
+    
+    // Google Analytics 4 (if you add it later)
+    if (typeof gtag !== 'undefined') {
+        gtag('event', action, {
+            event_category: category,
+            event_label: label,
+            value: value
+        });
+    }
 }
 
 // Track CTA clicks

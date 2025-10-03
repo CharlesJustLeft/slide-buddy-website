@@ -24,6 +24,13 @@
             }
         }
     </script>
+    
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="min-h-screen bg-white font-google">
@@ -114,13 +121,52 @@
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
                         See It In Action
                     </h2>
+                    <p class="text-lg text-gray-600">
+                        Watch how Slide Buddy translates entire presentations in seconds
+                    </p>
                 </div>
-                <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
-                    <div class="aspect-video bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center mb-6">
-                        <div class="text-center">
-                            <div class="text-6xl mb-4">📹</div>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Demo Video Coming Soon</h3>
-                            <p class="text-gray-600">Watch Slide Buddy translate presentations in real-time</p>
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <div class="relative aspect-video rounded-xl overflow-hidden bg-black">
+                        <!-- Video Element -->
+                        <video 
+                            id="demo-video"
+                            class="w-full h-full object-cover cursor-pointer"
+                            poster="assets/video/demo-cover.jpg"
+                            controls
+                            preload="metadata"
+                            playsinline
+                        >
+                            <source src="assets/video/Slide Buddy Demo.mov" type="video/quicktime">
+                            <p class="text-white p-4">
+                                Your browser doesn't support video playback. 
+                                <a href="assets/video/Slide Buddy Demo.mov" class="text-blue-400 underline">
+                                    Download the demo video
+                                </a>
+                            </p>
+                        </video>
+                        
+                        <!-- Custom Play Button Overlay -->
+                        <div id="video-overlay" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 cursor-pointer transition-opacity duration-300">
+                            <div class="bg-white bg-opacity-90 rounded-full p-6 transform transition-transform duration-300 hover:scale-110">
+                                <svg class="w-12 h-12 text-google-blue ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Description -->
+                    <div class="mt-6 text-center">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                            🚀 Full Presentation Translation in 5 Seconds
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            See how Slide Buddy translates an entire presentation from English to Spanish with just a simple command.
+                        </p>
+                        <div class="flex flex-wrap justify-center gap-4 text-sm">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">✨ AI-Powered</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">⚡ Lightning Fast</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">🎯 Context-Aware</span>
                         </div>
                     </div>
                 </div>

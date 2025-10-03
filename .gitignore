@@ -39,6 +39,9 @@ logs
 *.avi
 *.mkv
 
+# Specific large demo video
+assets/video/Slide\ Buddy\ Demo.mov
+
 # Assets (until you add your own)
 # Uncomment these lines once you add your actual assets
 # !assets/slide-buddy-logo.png
