@@ -1,16 +1,21 @@
-// script.js
+// Modern Google-style JavaScript with enhanced functionality
 
 // Marketplace button click handler
 document.getElementById('marketplace-btn').addEventListener('click', function() {
-    // Replace with your actual Google Workspace Marketplace URL when available
-    alert('Google Workspace Marketplace link will be added once your add-on is published!');
+    // Add loading state
+    this.classList.add('loading');
+    this.innerHTML = 'Opening Marketplace...';
+    
+    // Simulate marketplace redirect (replace with actual URL when available)
+    setTimeout(() => {
+        alert('Google Workspace Marketplace link will be added once your add-on is published!');
+        this.classList.remove('loading');
+        this.innerHTML = 'Try it for Free now';
+    }, 1000);
+    
+    // In production, replace alert with:
     // window.open('YOUR_MARKETPLACE_URL_HERE', '_blank');
 });
-
-// Demo video upload functionality
-function uploadDemoVideo() {
-    alert('To add your demo video:\n\n1. Upload your video file to the assets/ folder\n2. Replace the video placeholder section in index.html\n3. Use the commented example as a guide');
-}
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -26,21 +31,169 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add scroll effect to navbar
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+// Header scroll effect
+let lastScrollY = window.scrollY;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    
+    if (currentScrollY > 100) {
+        header.classList.add('shadow-lg');
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.classList.remove('shadow-lg');
+    }
+    
+    lastScrollY = currentScrollY;
+});
+
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fadeInUp');
+        }
+    });
+}, observerOptions);
+
+// Observe elements for animation
+document.addEventListener('DOMContentLoaded', () => {
+    const animateElements = document.querySelectorAll('.feature-card, .stat, .step');
+    animateElements.forEach(el => {
+        observer.observe(el);
+    });
+});
+
+// Stats counter animation
+function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16);
+    
+    const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(start);
+        }
+    }, 16);
+}
+
+// Initialize counter animations when in view
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const statNumber = entry.target.querySelector('.stat-number');
+            if (statNumber && !statNumber.classList.contains('animated')) {
+                statNumber.classList.add('animated');
+                const text = statNumber.textContent;
+                const number = parseInt(text.match(/\d+/)?.[0] || '0');
+                if (number > 0) {
+                    statNumber.textContent = '0';
+                    setTimeout(() => {
+                        animateCounter(statNumber, number);
+                    }, 200);
+                }
+            }
+        }
+    });
+}, { threshold: 0.5 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const stats = document.querySelectorAll('.stat');
+    stats.forEach(stat => statsObserver.observe(stat));
+});
+
+// Feature card interactions
+document.querySelectorAll('.feature-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-8px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Mobile menu toggle (if needed for responsive design)
+function toggleMobileMenu() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('mobile-open');
+}
+
+// Keyboard navigation support
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        // Close any open modals or menus
+        document.querySelectorAll('.mobile-open').forEach(el => {
+            el.classList.remove('mobile-open');
+        });
     }
 });
 
-// Add loading animation to CTA button
-document.getElementById('marketplace-btn').addEventListener('mouseenter', function() {
-    this.style.transform = 'translateY(-2px)';
+// Performance optimization: Lazy load images
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    imageObserver.unobserve(img);
+                }
+            }
+        });
+    });
+
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
+
+// Error handling for images
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', function() {
+        this.style.display = 'none';
+        console.warn('Failed to load image:', this.src);
+    });
 });
 
-document.getElementById('marketplace-btn').addEventListener('mouseleave', function() {
-    this.style.transform = 'translateY(0)';
+// Analytics event tracking (placeholder)
+function trackEvent(category, action, label) {
+    // Replace with your analytics implementation
+    console.log('Event tracked:', { category, action, label });
+    
+    // Example for Google Analytics 4:
+    // gtag('event', action, {
+    //     event_category: category,
+    //     event_label: label
+    // });
+}
+
+// Track CTA clicks
+document.querySelectorAll('button, .cta-link').forEach(element => {
+    element.addEventListener('click', function() {
+        const text = this.textContent.trim();
+        trackEvent('CTA', 'click', text);
+    });
 });
+
+// Service Worker registration (for PWA features)
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+                console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+                console.log('SW registration failed: ', registrationError);
+            });
+    });
+}

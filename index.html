@@ -5,237 +5,314 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slide Buddy - AI-Powered Google Slides Translation & Text Management</title>
     <meta name="description" content="Translate entire presentations in one minute. Free Google Slides add-on powered by AI. No subscription fees, 30+ languages supported.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'google': ['Google Sans', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'google-blue': '#1a73e8',
+                        'google-yellow': '#fbbc04',
+                        'google-red': '#ea4335',
+                        'google-green': '#34a853',
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy Logo" class="logo-img">
-                <span class="logo-text">Slide Buddy</span>
+<body class="min-h-screen bg-white font-google">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div class="container mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+            <div class="flex items-center space-x-3">
+                <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy Logo" class="h-8 w-8 rounded">
+                <span class="font-medium text-lg text-gray-900">Slide Buddy</span>
             </div>
-            <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#demo">Demo</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#setup">Setup</a>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#features" class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    Features
+                </a>
+                <a href="#demo" class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    Demo
+                </a>
+                <a href="#setup" class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    Setup
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button class="bg-google-blue hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-colors">
+                    Get Extension
+                </button>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-logo">
-                    <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy" class="hero-logo-img">
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-b from-blue-50 to-white py-20 md:py-32">
+            <div class="container mx-auto max-w-6xl px-6">
+                <div class="text-center">
+                    <!-- Logo -->
+                    <div class="mx-auto mb-8 h-20 w-20 rounded-2xl shadow-lg overflow-hidden">
+                        <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <h1 class="mx-auto max-w-4xl text-4xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">
+                        Translate All Your Slides
+                        <span class="block mt-2">
+                            <span class="inline-flex items-center bg-google-yellow px-4 py-2 rounded-full text-black font-bold">
+                                → One Minute ⏰
+                            </span>
+                        </span>
+                    </h1>
+                    
+                    <p class="mx-auto max-w-2xl text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+                        AI-powered Google Slides add-on that translates entire presentations instantly.
+                        <strong class="text-gray-900">100% FREE</strong> - No subscription, no hidden fees.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                        <button id="marketplace-btn" class="bg-google-blue hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-lg">
+                            Try it for Free now
+                        </button>
+                        <p class="text-sm text-gray-500">
+                            Install from Google Workspace Marketplace
+                        </p>
+                    </div>
+                    
+                    <!-- Key Stats -->
+                    <div class="flex flex-wrap justify-center gap-8 mt-12">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-google-blue mb-1">5 sec</div>
+                            <div class="text-sm text-gray-600">Full presentation</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-google-green mb-1">30+</div>
+                            <div class="text-sm text-gray-600">Languages</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-google-yellow mb-1">100%</div>
+                            <div class="text-sm text-gray-600">Free</div>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="hero-title">
-                    Translate All Your<br>
-                    Slides<br>
-                    <span class="highlight">→ One Minute <span class="clock-icon">⏰</span></span>
-                </h1>
-                <p class="hero-subtitle">
-                    AI-powered Google Slides add-on that translates entire presentations instantly.<br>
-                    <strong>100% FREE</strong> - No subscription, no hidden fees.
+            </div>
+        </section>
+
+        <!-- Demo Video Section -->
+        <section id="demo" class="py-20 bg-gray-50">
+            <div class="container mx-auto max-w-4xl px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                        See It In Action
+                    </h2>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+                    <div class="aspect-video bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center mb-6">
+                        <div class="text-center">
+                            <div class="text-6xl mb-4">📹</div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Demo Video Coming Soon</h3>
+                            <p class="text-gray-600">Watch Slide Buddy translate presentations in real-time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20">
+            <div class="container mx-auto max-w-6xl px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                        Why Choose Slide Buddy?
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Powerful AI-driven features that save time and improve your presentation workflow.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                        <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                            <span class="text-2xl">🌍</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">Context-Aware Translation</h3>
+                        <p class="text-gray-600 mb-4">Understands exactly what you want to translate - selected text, current slide, or entire presentation.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>30+ languages supported</li>
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Native language commands</li>
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Professional quality</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                        <div class="h-12 w-12 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
+                            <span class="text-2xl">⚡</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">Lightning Fast</h3>
+                        <p class="text-gray-600 mb-4">Translate entire presentations in seconds, not hours.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>50 slides in ~5 seconds</li>
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Single slide in <1 second</li>
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Powered by Gemini 2.5 Flash</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                        <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                            <span class="text-2xl">🔍</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">Smart Find & Replace</h3>
+                        <p class="text-gray-600 mb-4">Bulk text replacement across your entire presentation with natural language.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Natural language commands</li>
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Instant across all slides</li>
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Perfect for rebranding</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                        <div class="h-12 w-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                            <span class="text-2xl">💰</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">100% Free</h3>
+                        <p class="text-gray-600 mb-4">No subscription fees, no hidden costs.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Free add-on forever</li>
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Built-in cost tracking</li>
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>No subscription needed</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                        <div class="h-12 w-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                            <span class="text-2xl">🧠</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">AI-Powered Intelligence</h3>
+                        <p class="text-gray-600 mb-4">Remembers context and responds to natural language in any language.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Conversation memory</li>
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Context preservation</li>
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Intent understanding</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                        <div class="h-12 w-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+                            <span class="text-2xl">🔒</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">Privacy & Security</h3>
+                        <p class="text-gray-600 mb-4">No data storage, secure Google OAuth, you control your API keys.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>No persistent logs</li>
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Real-time processing</li>
+                            <li class="flex items-center"><span class="text-google-green mr-2">✓</span>Google OAuth security</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Setup Section -->
+        <section id="setup" class="py-20 bg-gray-50">
+            <div class="container mx-auto max-w-4xl px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                        Quick Setup (1 Minute)
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Get started with Slide Buddy in just two simple steps
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-3xl mx-auto">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-google-blue text-white rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-6">
+                            1
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900">Install from Marketplace</h3>
+                        <p class="text-gray-600">Search "Slide Buddy" in Google Workspace Marketplace</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-google-green text-white rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-6">
+                            2
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900">Start Translating</h3>
+                        <p class="text-gray-600">Open Slide Buddy sidebar and type "translate to Spanish"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-google-blue to-blue-600">
+            <div class="container mx-auto max-w-4xl px-6 text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Ready to transform your presentations?
+                </h2>
+                <p class="text-xl mb-8 opacity-90">
+                    Join thousands of users who save hours with Slide Buddy
                 </p>
-                
-                <!-- CTA Button Placeholder -->
-                <div class="cta-container">
-                    <button class="cta-button" id="marketplace-btn">
-                        <span class="cta-text">Try it for Free now</span>
-                        <span class="cta-gradient"></span>
-                    </button>
-                    <p class="cta-note">Install from Google Workspace Marketplace</p>
-                </div>
-
-                <!-- Key Stats -->
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">5 sec</span>
-                        <span class="stat-label">Full presentation</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">30+</span>
-                        <span class="stat-label">Languages</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Free</span>
-                    </div>
-                </div>
+                <button class="bg-white text-google-blue hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-lg">
+                    Get Started - It's Free
+                </button>
             </div>
-        </div>
-    </section>
-
-    <!-- Demo Video Section -->
-    <section class="demo-section" id="demo">
-        <div class="container">
-            <h2 class="section-title">See It In Action</h2>
-            <div class="demo-container">
-                <!-- Video Placeholder - You can upload your demo video here -->
-                <div class="video-placeholder" id="demo-video-container">
-                    <div class="video-upload-area">
-                        <div class="upload-icon">📹</div>
-                        <h3>Demo Video Coming Soon</h3>
-                        <p>Upload your demo video to showcase Slide Buddy in action</p>
-                        <button class="upload-btn" onclick="uploadDemoVideo()">Upload Demo Video</button>
-                    </div>
-                    <!-- Replace above with actual video when ready:
-                    <video controls poster="assets/demo-thumbnail.jpg">
-                        <source src="assets/slide-buddy-demo.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-section" id="features">
-        <div class="container">
-            <h2 class="section-title">Why Choose Slide Buddy?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Context-Aware Translation</h3>
-                    <p>Understands exactly what you want to translate - selected text, current slide, or entire presentation.</p>
-                    <ul>
-                        <li>30+ languages supported</li>
-                        <li>Native language commands</li>
-                        <li>Professional quality</li>
-                    </ul>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Translate entire presentations in seconds, not hours.</p>
-                    <ul>
-                        <li>50 slides in ~5 seconds</li>
-                        <li>Single slide in <1 second</li>
-                        <li>Powered by Gemini 2.5 Flash</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔍</div>
-                    <h3>Smart Find & Replace</h3>
-                    <p>Bulk text replacement across your entire presentation with natural language.</p>
-                    <ul>
-                        <li>Natural language commands</li>
-                        <li>Instant across all slides</li>
-                        <li>Perfect for rebranding</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>100% Free</h3>
-                    <p>No subscription fees, no hidden costs. You only pay for your own API usage.</p>
-                    <ul>
-                        <li>Free add-on forever</li>
-                        <li>~$0.01-$0.03 per presentation</li>
-                        <li>Built-in cost tracking</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <h3>AI-Powered Intelligence</h3>
-                    <p>Remembers context and responds to natural language in any language.</p>
-                    <ul>
-                        <li>Conversation memory</li>
-                        <li>Context preservation</li>
-                        <li>Intent understanding</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Privacy & Security</h3>
-                    <p>No data storage, secure Google OAuth, you control your API keys.</p>
-                    <ul>
-                        <li>No persistent logs</li>
-                        <li>Real-time processing</li>
-                        <li>Google OAuth security</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing-section" id="pricing">
-        <div class="container">
-            <h2 class="section-title">Simple, Transparent Pricing</h2>
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <h3>Slide Buddy Add-on</h3>
-                    <div class="price">
-                        <span class="price-amount">FREE</span>
-                        <span class="price-period">Forever</span>
-                    </div>
-                </div>
-                <div class="pricing-features">
-                    <div class="pricing-feature">✅ Unlimited translations</div>
-                    <div class="pricing-feature">✅ All 30+ languages</div>
-                    <div class="pricing-feature">✅ Find & replace</div>
-                    <div class="pricing-feature">✅ Context awareness</div>
-                    <div class="pricing-feature">✅ Cost tracking</div>
-                    <div class="pricing-feature">✅ No subscription needed</div>
-                </div>
-                <div class="pricing-note">
-                    <strong>No hidden costs, no subscription fees.</strong><br>
-                    <em>Completely free to use forever!</em>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Setup Section -->
-    <section class="setup-section" id="setup">
-        <div class="container">
-            <h2 class="section-title">Quick Setup (1 Minute)</h2>
-            <div class="setup-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Install from Marketplace</h3>
-                        <p>Search "Slide Buddy" in Google Workspace Marketplace</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Start Translating</h3>
-                        <p>Open Slide Buddy sidebar and type "translate to Spanish"</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy" class="footer-logo-img">
-                    <span>Slide Buddy</span>
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="container mx-auto max-w-6xl px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy" class="h-8 w-8 rounded">
+                        <span class="font-semibold text-lg text-white">Slide Buddy</span>
+                    </div>
+                    <p class="text-gray-400 max-w-md mb-4">
+                        The AI-powered Google Slides extension that helps you translate 
+                        presentations faster and easier than ever before.
+                    </p>
                 </div>
-                <div class="footer-links">
-                    <a href="https://github.com/TomMcLan/slide-buddy-apps-script" target="_blank">GitHub</a>
-                    <a href="PRIVACY_POLICY.md" target="_blank">Privacy Policy</a>
-                    <a href="TERMS_OF_SERVICE.md" target="_blank">Terms of Service</a>
-                    <a href="#" target="_blank">Support</a>
+                
+                <!-- Product -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#demo" class="text-gray-400 hover:text-white transition-colors">Demo</a></li>
+                        <li><a href="#setup" class="text-gray-400 hover:text-white transition-colors">Setup</a></li>
+                        <li><a href="https://github.com/TomMcLan/slide-buddy-apps-script" class="text-gray-400 hover:text-white transition-colors" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="PRIVACY_POLICY.md" class="text-gray-400 hover:text-white transition-colors" target="_blank">Privacy Policy</a></li>
+                        <li><a href="TERMS_OF_SERVICE.md" class="text-gray-400 hover:text-white transition-colors" target="_blank">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Support</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Slide Buddy. Making multilingual presentations effortless and FREE.</p>
+            
+            <div class="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 Slide Buddy. Making multilingual presentations effortless and FREE.
+                </p>
+                <p class="text-gray-400 text-sm mt-4 md:mt-0">
+                    Made with ❤️ for Google Slides users
+                </p>
             </div>
         </div>
     </footer>

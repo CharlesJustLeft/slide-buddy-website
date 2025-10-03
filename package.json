@@ -1,24 +1,41 @@
 {
   "name": "slide-buddy-website",
-  "version": "1.0.0",
-  "description": "Official website for Slide Buddy - AI-Powered Google Slides Translation & Text Management add-on",
+  "version": "2.0.0",
+  "description": "Official website for Slide Buddy - AI-Powered Google Slides Translation & Text Management add-on with modern Google-style design",
   "main": "index.html",
   "scripts": {
     "dev": "python -m http.server 8000",
     "build": "echo 'Static site - no build needed'",
-    "start": "python -m http.server 8000"
+    "start": "python -m http.server 8000",
+    "test": "echo 'No tests configured'",
+    "lint": "echo 'No linting configured'"
   },
   "keywords": [
     "google-slides",
     "translation",
     "ai",
     "productivity",
-    "add-on"
+    "add-on",
+    "google-workspace",
+    "presentation",
+    "multilingual"
   ],
   "author": "TomMcLan",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/TomMcLan/slide-buddy-website.git"
-  }
+  },
+  "homepage": "https://slide-buddy-website.vercel.app",
+  "bugs": {
+    "url": "https://github.com/TomMcLan/slide-buddy-website/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
