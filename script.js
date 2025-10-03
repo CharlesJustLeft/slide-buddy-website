@@ -1,52 +1,21 @@
 // Modern Google-style JavaScript with enhanced functionality
 
-// Video modal functionality
-function openVideoModal() {
-    const modal = document.getElementById('video-modal');
-    if (modal) {
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-        trackEvent('Video', 'modal_open', 'YouTube Demo Video');
-        
-        // Track YouTube video load
-        trackEvent('Video', 'youtube_embed_load', 'iatiricuU4U');
-    }
-}
-
-function closeVideoModal() {
-    const modal = document.getElementById('video-modal');
-    if (modal) {
-        modal.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-        trackEvent('Video', 'modal_close', 'Demo Video');
-    }
-}
-
 // Try Extension function
 function tryExtension() {
-    trackEvent('CTA', 'try_extension_from_modal', 'Demo Video Modal');
+    trackEvent('CTA', 'try_extension_from_demo', 'YouTube Demo Section');
     // Replace with actual marketplace URL when available
     alert('🚀 Redirecting to Google Workspace Marketplace...\n\nYour add-on will be available soon!');
-    closeVideoModal();
 }
 
-// Close modal when clicking outside
+// Track YouTube video interactions
 document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('video-modal');
-    if (modal) {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeVideoModal();
-            }
+    // Track when YouTube iframe is loaded
+    const iframe = document.querySelector('iframe[src*="youtube.com"]');
+    if (iframe) {
+        iframe.addEventListener('load', () => {
+            trackEvent('Video', 'youtube_direct_embed_load', 'iatiricuU4U');
         });
     }
-    
-    // Close modal with Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeVideoModal();
-        }
-    });
 });
 
 // Marketplace button click handler

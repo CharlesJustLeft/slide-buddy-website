@@ -125,154 +125,71 @@
                         Watch how Slide Buddy translates entire presentations in seconds
                     </p>
                 </div>
+                
+                <!-- Direct YouTube Embed -->
                 <div class="bg-white rounded-2xl shadow-lg p-8">
-                    <div class="relative aspect-video rounded-xl overflow-hidden bg-black">
-                        <!-- Video Placeholder with Cover Image -->
-                        <div class="w-full h-full bg-cover bg-center relative" style="background-image: url('assets/video/demo-cover.jpg');">
-                            <!-- Play Button Overlay -->
-                            <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 cursor-pointer transition-opacity duration-300 hover:bg-opacity-30" onclick="openVideoModal()">
-                                <div class="bg-white bg-opacity-95 rounded-full p-6 transform transition-transform duration-300 hover:scale-110 shadow-lg">
-                                    <svg class="w-12 h-12 text-google-blue ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            
-                            <!-- Video Info Overlay -->
-                            <div class="absolute bottom-4 left-4 right-4">
-                                <div class="bg-black bg-opacity-70 rounded-lg p-3 text-white">
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-sm font-medium">🎬 Demo Video Available</span>
-                                        <span class="text-xs bg-google-blue px-2 py-1 rounded">HD Quality</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="aspect-video rounded-xl overflow-hidden shadow-lg mb-6">
+                        <iframe 
+                            class="w-full h-full"
+                            src="https://www.youtube.com/embed/iatiricuU4U?rel=0&modestbranding=1&showinfo=0"
+                            title="Slide Buddy Demo - AI Translation in 5 Seconds"
+                            frameborder="0"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                     
                     <!-- Video Description -->
-                    <div class="mt-6 text-center">
+                    <div class="text-center mb-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">
                             🚀 Full Presentation Translation in 5 Seconds
                         </h3>
                         <p class="text-gray-600 mb-4">
                             See how Slide Buddy translates an entire presentation from English to Spanish with just a simple command.
                         </p>
-                        <div class="flex flex-wrap justify-center gap-4 text-sm mb-4">
+                        <div class="flex flex-wrap justify-center gap-4 text-sm">
                             <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">✨ AI-Powered</span>
                             <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">⚡ Lightning Fast</span>
                             <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">🎯 Context-Aware</span>
                         </div>
-                        
-                        <!-- Video Access Options -->
-                        <div class="bg-gray-50 rounded-lg p-4">
-                            <p class="text-sm text-gray-600 mb-3">
-                                📹 <strong>Demo video available</strong> - Click play above or choose your preferred viewing option:
-                            </p>
-                            <div class="flex flex-wrap justify-center gap-3">
-                                <button onclick="openVideoModal()" class="bg-google-blue text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition-colors">
-                                    ▶️ Watch Demo
-                                </button>
-                                <a href="mailto:support@slidebuddy.com?subject=Demo Video Request" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm hover:bg-gray-300 transition-colors">
-                                    📧 Request Video
-                                </a>
-                            </div>
+                    </div>
+                    
+                    <!-- Demo Features -->
+                    <div class="bg-blue-50 rounded-lg p-4 mb-6">
+                        <h4 class="font-semibold text-blue-900 mb-2">✨ What you see in the demo:</h4>
+                        <ul class="text-sm text-blue-800 space-y-1">
+                            <li>• Natural language command: "Translate all slides to Spanish"</li>
+                            <li>• AI processing 27 slides with 56 text elements</li>
+                            <li>• Professional Spanish translation in seconds</li>
+                            <li>• Seamless Google Slides integration</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Performance Stats -->
+                    <div class="grid grid-cols-3 gap-4 text-center pt-4 border-t border-gray-200 mb-6">
+                        <div>
+                            <div class="text-2xl font-bold text-google-blue">5s</div>
+                            <div class="text-xs text-gray-600">Translation Time</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-google-green">27</div>
+                            <div class="text-xs text-gray-600">Slides Processed</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-google-yellow">56</div>
+                            <div class="text-xs text-gray-600">Text Elements</div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Video Modal -->
-                <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
-                    <div class="bg-white rounded-lg p-6 max-w-4xl mx-4 max-h-[90vh] overflow-y-auto">
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-lg font-semibold">Slide Buddy Demo Video</h3>
-                            <button onclick="closeVideoModal()" class="text-gray-500 hover:text-gray-700">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                        <!-- YouTube Video Embed -->
-                        <div class="aspect-video mb-6">
-                            <iframe 
-                                id="youtube-player"
-                                class="w-full h-full rounded-lg shadow-lg"
-                                src="https://www.youtube.com/embed/iatiricuU4U?autoplay=1&rel=0&modestbranding=1&showinfo=0"
-                                title="Slide Buddy Demo - AI Translation in 5 Seconds"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        
-                        <!-- Video Description -->
-                        <div class="text-center mb-6">
-                            <h4 class="text-lg font-semibold text-gray-900 mb-2">
-                                🚀 Full Presentation Translation in 5 Seconds
-                            </h4>
-                            <p class="text-gray-600 text-sm">
-                                Watch how Slide Buddy translates an entire presentation from English to Spanish with just a simple command.
-                            </p>
-                        </div>
-                        
-                        <!-- Demo Features -->
-                        <div class="bg-blue-50 rounded-lg p-4 mb-6">
-                            <h5 class="font-semibold text-blue-900 mb-2">✨ What you'll see in the demo:</h5>
-                            <ul class="text-sm text-blue-800 space-y-1">
-                                <li>• Natural language command: "Translate all slides to Spanish"</li>
-                                <li>• AI processing 27 slides with 56 text elements</li>
-                                <li>• Professional Spanish translation in seconds</li>
-                                <li>• Seamless Google Slides integration</li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Performance Stats -->
-                        <div class="pt-4 border-t border-gray-200 mb-6">
-                            <div class="grid grid-cols-3 gap-4 text-center">
-                                <div>
-                                    <div class="text-2xl font-bold text-google-blue">5s</div>
-                                    <div class="text-xs text-gray-600">Translation Time</div>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-google-green">27</div>
-                                    <div class="text-xs text-gray-600">Slides Processed</div>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-google-yellow">56</div>
-                                    <div class="text-xs text-gray-600">Text Elements</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- CTA and External Links -->
-                        <div class="space-y-3">
-                            <div class="text-center">
-                                <button onclick="tryExtension()" 
-                                        class="bg-google-blue text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                                    🚀 Try Slide Buddy Now
-                                </button>
-                            </div>
-                            
-                            <div class="flex justify-center">
-                                <a href="https://www.youtube.com/watch?v=iatiricuU4U" 
-                                   target="_blank"
-                                   class="text-gray-600 hover:text-gray-800 text-sm flex items-center"
-                                   onclick="trackEvent('Video', 'youtube_external_link', 'Demo Video')">
-                                    📺 Watch on YouTube
-                                    <svg class="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
-                                        <path d="M5 5a2 2 0 00-2 2v6a2 2 0 002 2h6a2 2 0 002-2v-2a1 1 0 10-2 0v2H5V7h2a1 1 0 000-2H5z"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-4 text-center">
-                            <button onclick="closeVideoModal()" class="text-gray-500 hover:text-gray-700 text-sm">
-                                Close
-                            </button>
-                        </div>
+                    
+                    <!-- CTA -->
+                    <div class="text-center">
+                        <button onclick="tryExtension()" 
+                                class="bg-google-blue text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-700 transition-colors transform hover:scale-105 shadow-lg">
+                            🚀 Try Slide Buddy Now
+                        </button>
+                        <p class="text-sm text-gray-500 mt-3">
+                            Available on Google Workspace Marketplace
+                        </p>
                     </div>
                 </div>
             </div>
