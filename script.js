@@ -6,7 +6,10 @@ function openVideoModal() {
     if (modal) {
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
-        trackEvent('Video', 'modal_open', 'Demo Video');
+        trackEvent('Video', 'modal_open', 'YouTube Demo Video');
+        
+        // Track YouTube video load
+        trackEvent('Video', 'youtube_embed_load', 'iatiricuU4U');
     }
 }
 
