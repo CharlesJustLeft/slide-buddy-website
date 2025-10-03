@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "name": "slide-buddy-website",
+  "outputDirectory": ".",
+  "buildCommand": "echo 'Static site - no build needed'",
+  "devCommand": "python -m http.server 8000",
+  "installCommand": "echo 'No dependencies to install'",
+  "framework": null
+}
