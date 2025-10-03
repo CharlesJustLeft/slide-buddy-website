@@ -5,9 +5,6 @@
   "devCommand": "python -m http.server 8000",
   "installCommand": "echo 'No dependencies to install'",
   "framework": null,
-  "analytics": {
-    "id": "prj_slide-buddy-website"
-  },
   "functions": {
     "assets/video/**": {
       "maxDuration": 30
