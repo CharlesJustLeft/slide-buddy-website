@@ -33,7 +33,14 @@ logs
 *.tmp
 *.temp
 
+# Large video files (too big for Vercel deployment)
+*.mp4
+*.mov
+*.avi
+*.mkv
+
 # Assets (until you add your own)
 # Uncomment these lines once you add your actual assets
 # !assets/slide-buddy-logo.png
-# !assets/slide-buddy-demo.mp4
+# For demo videos, use external hosting (YouTube, Vimeo, etc.)
+.vercel
