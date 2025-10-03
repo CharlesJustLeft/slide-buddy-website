@@ -183,7 +183,7 @@
 
                 <!-- Video Modal -->
                 <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
-                    <div class="bg-white rounded-lg p-6 max-w-2xl mx-4">
+                    <div class="bg-white rounded-lg p-6 max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
                         <div class="flex justify-between items-center mb-4">
                             <h3 class="text-lg font-semibold">Slide Buddy Demo Video</h3>
                             <button onclick="closeVideoModal()" class="text-gray-500 hover:text-gray-700">
@@ -192,23 +192,77 @@
                                 </svg>
                             </button>
                         </div>
-                        <div class="text-center py-8">
-                            <div class="text-6xl mb-4">🎬</div>
-                            <h4 class="text-xl font-semibold mb-2">Demo Video Coming Soon!</h4>
-                            <p class="text-gray-600 mb-4">
-                                We're preparing a high-quality demo video that showcases Slide Buddy's translation capabilities.
-                            </p>
-                            <p class="text-sm text-gray-500 mb-6">
-                                In the meantime, you can try the extension directly from the Google Workspace Marketplace.
-                            </p>
-                            <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                                <button class="bg-google-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                                    Try Extension Now
-                                </button>
-                                <button onclick="closeVideoModal()" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-                                    Close
+                        
+                        <!-- Video Preview -->
+                        <div class="mb-6">
+                            <img src="assets/video/demo-cover.jpg" alt="Slide Buddy Demo Preview" class="w-full rounded-lg shadow-lg">
+                            <div class="mt-3 text-center">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-2">🚀 Full Presentation Translation Demo</h4>
+                                <p class="text-gray-600 text-sm">
+                                    Watch how Slide Buddy translates an entire presentation from English to Spanish in just 5 seconds
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Demo Features -->
+                        <div class="bg-blue-50 rounded-lg p-4 mb-6">
+                            <h5 class="font-semibold text-blue-900 mb-2">✨ What you'll see in the demo:</h5>
+                            <ul class="text-sm text-blue-800 space-y-1">
+                                <li>• Natural language command: "Translate all slides to Spanish"</li>
+                                <li>• AI processing 27 slides with 56 text elements</li>
+                                <li>• Professional Spanish translation in seconds</li>
+                                <li>• Seamless Google Slides integration</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Access Options -->
+                        <div class="space-y-3">
+                            <h5 class="font-semibold text-gray-900">🎬 Access Demo Video:</h5>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <a href="../Slide Buddy Demo/Slide Buddy Demo.mov" 
+                                   download="Slide-Buddy-Demo.mov"
+                                   class="flex items-center justify-center bg-google-blue text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                                   onclick="trackEvent('Video', 'download', 'Demo Video')">
+                                    📥 Download Video (189MB)
+                                </a>
+                                
+                                <button onclick="tryExtension()" 
+                                        class="flex items-center justify-center bg-google-green text-white px-4 py-3 rounded-lg hover:bg-green-700 transition-colors text-sm font-medium">
+                                    🚀 Try Extension Now
                                 </button>
                             </div>
+                            
+                            <div class="flex justify-center">
+                                <a href="mailto:support@slidebuddy.com?subject=Demo Video Request&body=Hi! I'd like to request access to the Slide Buddy demo video." 
+                                   class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors text-sm">
+                                    📧 Request Video Link
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Performance Stats -->
+                        <div class="mt-6 pt-4 border-t border-gray-200">
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-google-blue">5s</div>
+                                    <div class="text-xs text-gray-600">Translation Time</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-google-green">27</div>
+                                    <div class="text-xs text-gray-600">Slides Processed</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-google-yellow">56</div>
+                                    <div class="text-xs text-gray-600">Text Elements</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 text-center">
+                            <button onclick="closeVideoModal()" class="text-gray-500 hover:text-gray-700 text-sm">
+                                Close
+                            </button>
                         </div>
                     </div>
                 </div>

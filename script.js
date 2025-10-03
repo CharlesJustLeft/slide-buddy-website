@@ -19,6 +19,14 @@ function closeVideoModal() {
     }
 }
 
+// Try Extension function
+function tryExtension() {
+    trackEvent('CTA', 'try_extension_from_modal', 'Demo Video Modal');
+    // Replace with actual marketplace URL when available
+    alert('🚀 Redirecting to Google Workspace Marketplace...\n\nYour add-on will be available soon!');
+    closeVideoModal();
+}
+
 // Close modal when clicking outside
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('video-modal');
