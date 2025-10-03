@@ -1,63 +1,41 @@
 // Modern Google-style JavaScript with enhanced functionality
 
-// Video player functionality
+// Video modal functionality
+function openVideoModal() {
+    const modal = document.getElementById('video-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        trackEvent('Video', 'modal_open', 'Demo Video');
+    }
+}
+
+function closeVideoModal() {
+    const modal = document.getElementById('video-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+        trackEvent('Video', 'modal_close', 'Demo Video');
+    }
+}
+
+// Close modal when clicking outside
 document.addEventListener('DOMContentLoaded', () => {
-    const video = document.getElementById('demo-video');
-    const overlay = document.getElementById('video-overlay');
-    
-    if (video && overlay) {
-        // Hide overlay when video starts playing
-        video.addEventListener('play', () => {
-            overlay.style.opacity = '0';
-            overlay.style.pointerEvents = 'none';
-        });
-        
-        // Show overlay when video is paused or ended
-        video.addEventListener('pause', () => {
-            overlay.style.opacity = '1';
-            overlay.style.pointerEvents = 'auto';
-        });
-        
-        video.addEventListener('ended', () => {
-            overlay.style.opacity = '1';
-            overlay.style.pointerEvents = 'auto';
-        });
-        
-        // Click overlay to play video
-        overlay.addEventListener('click', () => {
-            video.play();
-            trackEvent('Video', 'play', 'Demo Video');
-        });
-        
-        // Track video engagement
-        video.addEventListener('loadstart', () => {
-            trackEvent('Video', 'load_start', 'Demo Video');
-        });
-        
-        video.addEventListener('loadedmetadata', () => {
-            trackEvent('Video', 'metadata_loaded', 'Demo Video');
-        });
-        
-        video.addEventListener('timeupdate', () => {
-            const progress = (video.currentTime / video.duration) * 100;
-            if (progress >= 25 && !video.dataset.tracked25) {
-                trackEvent('Video', 'progress_25', 'Demo Video');
-                video.dataset.tracked25 = 'true';
+    const modal = document.getElementById('video-modal');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeVideoModal();
             }
-            if (progress >= 50 && !video.dataset.tracked50) {
-                trackEvent('Video', 'progress_50', 'Demo Video');
-                video.dataset.tracked50 = 'true';
-            }
-            if (progress >= 75 && !video.dataset.tracked75) {
-                trackEvent('Video', 'progress_75', 'Demo Video');
-                video.dataset.tracked75 = 'true';
-            }
-        });
-        
-        video.addEventListener('ended', () => {
-            trackEvent('Video', 'completed', 'Demo Video');
         });
     }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeVideoModal();
+        }
+    });
 });
 
 // Marketplace button click handler

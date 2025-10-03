@@ -127,30 +127,25 @@
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg p-8">
                     <div class="relative aspect-video rounded-xl overflow-hidden bg-black">
-                        <!-- Video Element -->
-                        <video 
-                            id="demo-video"
-                            class="w-full h-full object-cover cursor-pointer"
-                            poster="assets/video/demo-cover.jpg"
-                            controls
-                            preload="metadata"
-                            playsinline
-                        >
-                            <source src="assets/video/Slide Buddy Demo.mov" type="video/quicktime">
-                            <p class="text-white p-4">
-                                Your browser doesn't support video playback. 
-                                <a href="assets/video/Slide Buddy Demo.mov" class="text-blue-400 underline">
-                                    Download the demo video
-                                </a>
-                            </p>
-                        </video>
-                        
-                        <!-- Custom Play Button Overlay -->
-                        <div id="video-overlay" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 cursor-pointer transition-opacity duration-300">
-                            <div class="bg-white bg-opacity-90 rounded-full p-6 transform transition-transform duration-300 hover:scale-110">
-                                <svg class="w-12 h-12 text-google-blue ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
+                        <!-- Video Placeholder with Cover Image -->
+                        <div class="w-full h-full bg-cover bg-center relative" style="background-image: url('assets/video/demo-cover.jpg');">
+                            <!-- Play Button Overlay -->
+                            <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 cursor-pointer transition-opacity duration-300 hover:bg-opacity-30" onclick="openVideoModal()">
+                                <div class="bg-white bg-opacity-95 rounded-full p-6 transform transition-transform duration-300 hover:scale-110 shadow-lg">
+                                    <svg class="w-12 h-12 text-google-blue ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <!-- Video Info Overlay -->
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <div class="bg-black bg-opacity-70 rounded-lg p-3 text-white">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm font-medium">🎬 Demo Video Available</span>
+                                        <span class="text-xs bg-google-blue px-2 py-1 rounded">HD Quality</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -163,10 +158,57 @@
                         <p class="text-gray-600 mb-4">
                             See how Slide Buddy translates an entire presentation from English to Spanish with just a simple command.
                         </p>
-                        <div class="flex flex-wrap justify-center gap-4 text-sm">
+                        <div class="flex flex-wrap justify-center gap-4 text-sm mb-4">
                             <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">✨ AI-Powered</span>
                             <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">⚡ Lightning Fast</span>
                             <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">🎯 Context-Aware</span>
+                        </div>
+                        
+                        <!-- Video Access Options -->
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <p class="text-sm text-gray-600 mb-3">
+                                📹 <strong>Demo video available</strong> - Click play above or choose your preferred viewing option:
+                            </p>
+                            <div class="flex flex-wrap justify-center gap-3">
+                                <button onclick="openVideoModal()" class="bg-google-blue text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition-colors">
+                                    ▶️ Watch Demo
+                                </button>
+                                <a href="mailto:support@slidebuddy.com?subject=Demo Video Request" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm hover:bg-gray-300 transition-colors">
+                                    📧 Request Video
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Modal -->
+                <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+                    <div class="bg-white rounded-lg p-6 max-w-2xl mx-4">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-lg font-semibold">Slide Buddy Demo Video</h3>
+                            <button onclick="closeVideoModal()" class="text-gray-500 hover:text-gray-700">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="text-center py-8">
+                            <div class="text-6xl mb-4">🎬</div>
+                            <h4 class="text-xl font-semibold mb-2">Demo Video Coming Soon!</h4>
+                            <p class="text-gray-600 mb-4">
+                                We're preparing a high-quality demo video that showcases Slide Buddy's translation capabilities.
+                            </p>
+                            <p class="text-sm text-gray-500 mb-6">
+                                In the meantime, you can try the extension directly from the Google Workspace Marketplace.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                                <button class="bg-google-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                                    Try Extension Now
+                                </button>
+                                <button onclick="closeVideoModal()" class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+                                    Close
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
