@@ -1,0 +1,11 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="120" height="120" rx="24" fill="#F5C842"/>
+  
+  <!-- Card/Screen -->
+  <rect x="15" y="25" width="90" height="60" rx="8" fill="white"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="35" cy="50" rx="8" ry="12" fill="#F5C842"/>
+  <ellipse cx="85" cy="50" rx="8" ry="12" fill="#F5C842"/>
+</svg>
