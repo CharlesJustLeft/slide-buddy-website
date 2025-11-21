@@ -31,5 +31,6 @@
       "destination": "/",
       "permanent": true
     }
-  ]
+  ],
+  "cleanUrls": true
 }
