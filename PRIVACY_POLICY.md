@@ -43,7 +43,6 @@ Slide Buddy ("we," "our," or "the add-on") is a free Google Slides add-on that p
 ### Google OAuth Scopes
 We request the following permissions:
 - `presentations`: To read and modify slides for translation/replacement
-- `drive.readonly`: To access presentation metadata
 - `script.external_request`: To make API calls to Google Gemini
 - `script.container.ui`: To display the sidebar interface
 - `userinfo.email`: To isolate session data between users (email not stored)

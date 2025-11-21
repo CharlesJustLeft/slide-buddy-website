@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XMKTSGZ3VC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XMKTSGZ3VC');
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Charles Zuo",
+      "url": "https://slidebuddy.app/about.html",
+      "jobTitle": "Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Slide Buddy"
+      },
+      "sameAs": [
+        "https://github.com/CharlesJustLeft"
+      ]
+    }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About the Developer - Charles Zuo | Slide Buddy</title>
-    <meta name="description" content="Meet Charles Zuo, the vibe coding developer behind Slide Buddy. NYU graduate working in Product Growth at an AI startup, building helpful tools for everyone.">
+    <meta name="description"
+        content="Meet Charles Zuo, the vibe coding developer behind Slide Buddy. NYU graduate working in Product Growth at an AI startup, building helpful tools for everyone.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/slide-buddy-logo.svg">
 
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://slidebuddy.app/about.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://slidebuddy.app/about.html">
+    <meta property="og:title" content="About the Developer - Charles Zuo | Slide Buddy">
+    <meta property="og:description"
+        content="Meet Charles Zuo, the vibe coding developer behind Slide Buddy. NYU graduate working in Product Growth at an AI startup, building helpful tools for everyone.">
+    <meta property="og:image" content="https://slidebuddy.app/assets/Slide%20Buddy.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://slidebuddy.app/about.html">
+    <meta property="twitter:title" content="About the Developer - Charles Zuo | Slide Buddy">
+    <meta property="twitter:description" content="Meet Charles Zuo, the vibe coding developer behind Slide Buddy.">
+    <meta property="twitter:image" content="https://slidebuddy.app/assets/Slide%20Buddy.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -37,76 +83,89 @@
 
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="min-h-screen bg-white font-google">
+    <!-- Background Elements -->
+    <div class="grid-bg fixed inset-0 z-0 pointer-events-none"></div>
+    <div id="canvas-container" class="fixed inset-0 z-0 pointer-events-none"></div>
+
     <!-- Header -->
-    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <header
+        class="sticky top-0 z-50 w-full border-b border-white/20 bg-white/70 backdrop-blur-xl supports-[backdrop-filter]:bg-white/60">
         <div class="container mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-            <div class="flex items-center space-x-3">
+            <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
                 <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy Logo" class="h-8 w-8 rounded">
-                <span class="font-medium text-lg text-gray-900">Slide Buddy</span>
-            </div>
+                <span class="font-bold text-lg text-gray-900">Slide Buddy</span>
+            </a>
 
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="index.html#features" class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                <a href="index.html#features"
+                    class="text-gray-700 hover:text-google-blue transition-colors font-medium">
                     Features
-                </a>
-                <a href="index.html#demo" class="text-gray-700 hover:text-google-blue transition-colors font-medium">
-                    Demo
-                </a>
-                <a href="index.html#setup" class="text-gray-700 hover:text-google-blue transition-colors font-medium">
-                    Setup
-                </a>
-                <a href="index.html#support" class="text-gray-700 hover:text-google-blue transition-colors font-medium">
-                    Support
                 </a>
                 <a href="about.html" class="text-google-blue font-medium">
                     About
                 </a>
+                <a href="resources.html" class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    Resources
+                </a>
             </nav>
-
             <div class="flex items-center space-x-4">
-                <a href="index.html" class="bg-google-blue hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-colors">
+                <a href="index.html"
+                    class="bg-google-blue hover:bg-blue-700 text-white px-6 py-2 rounded-full font-bold transition-colors shadow-lg shadow-blue-500/30">
                     Back to App
                 </a>
             </div>
         </div>
     </header>
 
-    <main>
+    <main class="relative z-10">
         <!-- Hero Section -->
-        <section class="relative bg-gradient-to-b from-blue-50 to-white py-20">
+        <section class="relative py-20">
             <div class="container mx-auto max-w-4xl px-6">
                 <div class="text-center">
                     <!-- Profile Photo -->
-                    <div class="mx-auto mb-8 h-40 w-40 rounded-full overflow-hidden shadow-xl border-4 border-white">
+                    <div
+                        class="mx-auto mb-8 h-40 w-40 rounded-full overflow-hidden shadow-2xl border-4 border-white ring-4 ring-blue-50">
                         <img src="assets/charles-photo.jpg" alt="Charles Zuo" class="w-full h-full object-cover">
                     </div>
 
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+                    <h1 class="font-display text-5xl md:text-6xl font-bold mb-4 text-gray-900">
                         Charles Zuo
                     </h1>
 
-                    <p class="text-xl md:text-2xl text-google-blue mb-6 font-medium">
+                    <p class="text-xl md:text-2xl text-google-blue mb-6 font-medium font-mono">
                         Vibe Coding Developer 🚀
                     </p>
 
                     <p class="mx-auto max-w-2xl text-lg text-gray-600 mb-8 leading-relaxed">
-                        NYU graduate working in Product Growth at an AI startup, building tools to help people work smarter and connect better.
+                        NYU graduate working in Product Growth at an AI startup, building tools to help people work
+                        smarter and connect better.
                     </p>
 
                     <!-- Social Links -->
                     <div class="flex justify-center gap-4 mb-8">
                         <a href="https://github.com/CharlesJustLeft" target="_blank"
-                           class="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
+                            class="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                             </svg>
                             GitHub
                         </a>
+                        <a href="https://www.linkedin.com/in/yaocheng-zuo/" target="_blank"
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                            LinkedIn
+                        </a>
                         <a href="mailto:zuocharles00@gmail.com"
-                           class="bg-google-blue hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
+                            class="bg-google-blue hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                             Email Me
                         </a>
@@ -120,174 +179,176 @@
             <div class="container mx-auto max-w-4xl px-6">
                 <div class="space-y-12">
                     <!-- Bio -->
-                    <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                        <h2 class="text-3xl font-bold mb-6 text-gray-900">About Me</h2>
+                    <div class="glass p-10 rounded-2xl">
+                        <h2 class="font-display text-3xl font-bold mb-6 text-gray-900">About Me</h2>
                         <div class="prose prose-lg max-w-none text-gray-600">
                             <p class="mb-4">
-                                Hey there! I'm Charles, a <strong class="text-google-blue">vibe coding developer</strong> who believes in building tools that genuinely help people. I recently graduated from <strong>NYU</strong> and currently work in Product Growth at an AI startup, where I get to combine my love for technology with understanding what users actually need.
+                                Hey there! I'm Charles, a <strong class="text-google-blue">vibe coding
+                                    developer</strong> who believes in building tools that genuinely help people. I
+                                recently graduated from <strong>NYU</strong> and currently work in Product Growth at an
+                                AI startup, where I get to combine my love for technology with understanding what users
+                                actually need.
                             </p>
                             <p class="mb-4">
-                                My coding philosophy is simple: <em>if it doesn't vibe, it doesn't ship</em>. I focus on creating intuitive, user-friendly experiences that solve real problems without unnecessary complexity.
+                                My coding philosophy is simple: <em>if it doesn't vibe, it doesn't ship</em>. I focus on
+                                creating intuitive, user-friendly experiences that solve real problems without
+                                unnecessary complexity.
                             </p>
                             <p>
-                                When I'm not coding or analyzing growth metrics, you'll find me exploring new AI technologies, contributing to open-source projects, and thinking about how technology can make everyday tasks easier for everyone.
+                                When I'm not coding or analyzing growth metrics, you'll find me exploring new AI
+                                technologies, contributing to open-source projects, and thinking about how technology
+                                can make everyday tasks easier for everyone.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Why Slide Buddy -->
-                    <div class="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8 shadow-sm border border-gray-100">
-                        <h2 class="text-3xl font-bold mb-6 text-gray-900">Why I Built Slide Buddy</h2>
-                        <div class="text-gray-700 space-y-4">
-                            <p class="text-lg">
-                                Working with international teams, I saw firsthand how painful it was to manually translate presentation decks. People were spending <strong>hours</strong> copying and pasting text into Google Translate, slide by slide.
-                            </p>
-                            <p class="text-lg">
-                                I thought: <em>"There has to be a better way."</em>
-                            </p>
-                            <p class="text-lg">
-                                So I built Slide Buddy — a free, AI-powered tool that translates entire presentations in seconds. No subscriptions, no hidden fees, just a simple solution to a common problem.
-                            </p>
-                            <div class="bg-white rounded-lg p-6 mt-6 border-l-4 border-google-blue">
-                                <p class="text-gray-900 font-medium text-lg">
-                                    "If I can save someone even 30 minutes of tedious work, that's a win in my book."
+                    <!-- Why Slide Buddy (Redesigned) -->
+                    <div class="glass p-10 rounded-2xl border-t-4 border-google-green">
+                        <h2 class="font-display text-3xl font-bold mb-6 text-gray-900">Why I Built Slide Buddy</h2>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                            <div class="order-2 lg:order-1">
+                                <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                                    I realized that while translation tools existed, none of them respected the
+                                    <strong>design integrity</strong> of presentations.
                                 </p>
-                                <p class="text-gray-600 mt-2">— My motivation for every project</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Mission -->
-                    <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                        <h2 class="text-3xl font-bold mb-6 text-gray-900">Mission</h2>
-                        <p class="text-lg text-gray-600 mb-6">
-                            I'm on a mission to build helpful, accessible tools that make technology work for people — not the other way around. Every line of code I write is guided by one question:
-                        </p>
-                        <div class="bg-google-blue bg-opacity-10 rounded-lg p-6 border-l-4 border-google-blue">
-                            <p class="text-xl font-semibold text-google-blue">
-                                "Does this actually help someone do their work better?"
-                            </p>
-                        </div>
-                        <p class="text-lg text-gray-600 mt-6">
-                            If the answer is yes, I keep building. If not, back to the drawing board.
-                        </p>
-                    </div>
-
-                    <!-- Tech Stack -->
-                    <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                        <h2 class="text-3xl font-bold mb-6 text-gray-900">What I Work With</h2>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <div class="bg-blue-50 rounded-lg p-4 text-center">
-                                <p class="font-semibold text-gray-900">JavaScript</p>
-                                <p class="text-sm text-gray-600">Full-stack</p>
-                            </div>
-                            <div class="bg-green-50 rounded-lg p-4 text-center">
-                                <p class="font-semibold text-gray-900">Google Apps Script</p>
-                                <p class="text-sm text-gray-600">Automation</p>
-                            </div>
-                            <div class="bg-yellow-50 rounded-lg p-4 text-center">
-                                <p class="font-semibold text-gray-900">AI/ML APIs</p>
-                                <p class="text-sm text-gray-600">Integration</p>
-                            </div>
-                            <div class="bg-red-50 rounded-lg p-4 text-center">
-                                <p class="font-semibold text-gray-900">Product Growth</p>
-                                <p class="text-sm text-gray-600">Strategy</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Projects -->
-                    <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                        <h2 class="text-3xl font-bold mb-6 text-gray-900">Projects</h2>
-                        <div class="space-y-4">
-                            <div class="border-l-4 border-google-blue pl-6 py-2">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                                    <a href="index.html" class="hover:text-google-blue transition-colors">
-                                        Slide Buddy
-                                    </a>
-                                </h3>
-                                <p class="text-gray-600 mb-2">
-                                    AI-powered Google Slides™ translation add-on. Translate entire presentations in 5 seconds. 100% free.
+                                <p class="text-gray-600 text-lg leading-relaxed">
+                                    Slide Buddy was born from the idea that you shouldn't have to choose between speed
+                                    and quality. It's built to be the tool I wish I had.
                                 </p>
-                                <a href="https://github.com/CharlesJustLeft/slide-buddy-website" target="_blank"
-                                   class="text-google-blue hover:underline text-sm font-medium">
-                                    View on GitHub →
-                                </a>
+                            </div>
+
+                            <div class="order-1 lg:order-2">
+                                <div
+                                    class="bg-white rounded-xl shadow-lg overflow-hidden transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                                    <div class="aspect-video">
+                                        <iframe class="w-full h-full"
+                                            src="https://www.youtube.com/embed/P1Y4jMUPj7w?start=13&rel=0&modestbranding=1&showinfo=0"
+                                            title="Why I Built Slide Buddy" frameborder="0"
+                                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <p class="text-center text-xs text-gray-500 mt-3 font-medium">
+                                    The Story Behind the Product
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Contact CTA -->
-                    <div class="bg-gradient-to-r from-google-blue to-blue-600 rounded-xl p-8 text-center text-white shadow-lg">
-                        <h2 class="text-3xl font-bold mb-4">Let's Connect!</h2>
-                        <p class="text-xl mb-6 opacity-90">
-                            Have a project idea? Want to collaborate? Or just want to chat about code and vibes?
+
+                    <p class="text-lg">
+                        I thought: <em>"There has to be a better way."</em>
+                    </p>
+                    <p class="text-lg">
+                        So I built Slide Buddy — a free, AI-powered tool that translates entire presentations in
+                        seconds. No subscriptions, no hidden fees, just a simple solution to a common problem.
+                    </p>
+                    <div class="bg-blue-50/50 rounded-lg p-6 mt-6 border-l-4 border-google-blue">
+                        <p class="text-gray-900 font-medium text-lg">
+                            "If I can save someone even 30 minutes of tedious work, that's a win in my book."
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="mailto:zuocharles00@gmail.com"
-                               class="bg-white text-google-blue hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-lg">
-                                Email Me
-                            </a>
-                            <a href="https://github.com/CharlesJustLeft" target="_blank"
-                               class="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-lg">
-                                GitHub Profile
-                            </a>
-                        </div>
+                        <p class="text-gray-600 mt-2">— My motivation for every project</p>
                     </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+        <!-- Contact CTA (Full Width) -->
+        <section class="py-32 relative overflow-hidden">
+            <div class="absolute inset-0 bg-google-blue opacity-90 z-0"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-google-blue to-blue-600 z-0"></div>
+
+            <div class="container mx-auto max-w-4xl px-6 text-center text-white relative z-10">
+                <h2 class="font-display text-4xl md:text-6xl font-bold mb-8 tracking-tight">
+                    Let's Connect!
+                </h2>
+                <p class="text-xl md:text-2xl mb-12 opacity-90 font-light">
+                    Have a project idea? Want to collaborate? Or just want to chat about code and vibes?
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="mailto:zuocharles00@gmail.com"
+                        class="bg-white text-google-blue hover:bg-gray-100 px-10 py-5 rounded-full font-bold text-xl transition-all transform hover:scale-105 shadow-2xl inline-block">
+                        Email Me
+                    </a>
+                    <a href="https://github.com/CharlesJustLeft" target="_blank"
+                        class="bg-gray-900 text-white hover:bg-gray-800 px-10 py-5 rounded-full font-bold text-xl transition-all transform hover:scale-105 shadow-2xl inline-block">
+                        GitHub Profile
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-16">
+    <footer class="glass-dark text-gray-600 py-16 relative z-10">
         <div class="container mx-auto max-w-6xl px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <!-- Brand -->
                 <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center space-x-3 mb-4">
+                    <div class="flex items-center space-x-3 mb-6">
                         <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy" class="h-8 w-8 rounded">
-                        <span class="font-semibold text-lg text-white">Slide Buddy</span>
+                        <span class="font-bold text-xl text-gray-900">Slide Buddy</span>
                     </div>
-                    <p class="text-gray-400 max-w-md mb-4">
-                        Built with ❤️ by Charles Zuo, a vibe coding developer making technology more helpful for everyone.
+                    <p class="text-gray-500 max-w-md mb-6 leading-relaxed">
+                        Built with ❤️ by Charles Zuo, a vibe coding developer making technology more helpful for
+                        everyone.
                     </p>
                 </div>
 
                 <!-- Product -->
                 <div>
-                    <h3 class="text-white font-semibold mb-4">Product</h3>
-                    <ul class="space-y-2">
-                        <li><a href="index.html#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
-                        <li><a href="index.html#demo" class="text-gray-400 hover:text-white transition-colors">Demo</a></li>
-                        <li><a href="index.html#setup" class="text-gray-400 hover:text-white transition-colors">Setup</a></li>
-                        <li><a href="index.html#support" class="text-gray-400 hover:text-white transition-colors">Support</a></li>
+                    <h3 class="text-gray-900 font-bold mb-6">Product</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#features"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Features</a></li>
+                        <li><a href="index.html#demo"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Demo</a></li>
+                        <li><a href="index.html#setup"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Setup</a></li>
+                        <li><a href="resources.html"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Resources</a></li>
+                        <li><a href="index.html#support"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Support</a></li>
                     </ul>
                 </div>
 
                 <!-- Developer -->
                 <div>
-                    <h3 class="text-white font-semibold mb-4">Developer</h3>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
-                        <li><a href="https://github.com/CharlesJustLeft" class="text-gray-400 hover:text-white transition-colors" target="_blank">GitHub</a></li>
-                        <li><a href="PRIVACY_POLICY.md" class="text-gray-400 hover:text-white transition-colors" target="_blank">Privacy</a></li>
-                        <li><a href="TERMS_OF_SERVICE.md" class="text-gray-400 hover:text-white transition-colors" target="_blank">Terms</a></li>
+                    <h3 class="text-gray-900 font-bold mb-6">Developer</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html"
+                                class="text-gray-500 hover:text-google-blue transition-colors">About</a></li>
+                        <li><a href="https://github.com/CharlesJustLeft"
+                                class="text-gray-500 hover:text-google-blue transition-colors"
+                                target="_blank">GitHub</a></li>
+                        <li><a href="PRIVACY_POLICY.md" class="text-gray-500 hover:text-google-blue transition-colors"
+                                target="_blank">Privacy</a></li>
+                        <li><a href="TERMS_OF_SERVICE.md" class="text-gray-500 hover:text-google-blue transition-colors"
+                                target="_blank">Terms</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">
+            <div class="border-t border-gray-200 pt-8 mt-12 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">
                     © 2025 Charles Zuo. Making multilingual presentations effortless and FREE.
                 </p>
-                <p class="text-gray-400 text-sm mt-4 md:mt-0">
+                <p class="text-sm text-gray-400 mt-2 md:mt-0">
                     Google Slides™ is a trademark of Google LLC.
                 </p>
             </div>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
