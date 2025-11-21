@@ -76,122 +76,217 @@
     <!-- 3D Background -->
     <div id="canvas-container"></div>
 
-    Discover how AI-powered translation works and why it's better than traditional methods for
-    presentations.
-    </p>
-    <div class="flex items-center text-google-blue font-bold text-sm">
-        Read Guide
-        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-        </svg>
-    </div>
-    </a>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div class="container mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+            <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy Logo" class="h-8 w-8 rounded">
+                <span class="font-medium text-lg text-gray-900">Slide Buddy</span>
+            </a>
 
-    <!-- Article 3: Translation Tutorial -->
-    <a href="https://www.perplexity.ai/page/how-to-translate-google-slides-iJJR3SgvSB6R7_RDQKC9SA" target="_blank"
-        class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group block">
-        <div
-            class="h-14 w-14 bg-yellow-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-100 transition-colors">
-            <span class="text-3xl">🌍</span>
-        </div>
-        <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-google-blue transition-colors">
-            How to Translate Google Slides
-        </h3>
-        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-            Step-by-step tutorial on translating presentations with Slide Buddy. Support for 30+
-            languages.
-        </p>
-        <div class="flex items-center text-google-blue font-bold text-sm">
-            Read Guide
-            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-        </div>
-    </a>
-    </div>
-    </div>
-    </section>
-
-    <!-- Additional Resources Section -->
-    <section class="py-20 relative">
-        <div class="container mx-auto max-w-6xl px-6">
-            <div class="text-center mb-12">
-                <h2 class="font-display text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-                    More Resources
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- FAQ Link -->
-                <a href="index.html#support"
-                    class="glass p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group block">
-                    <div class="flex items-center mb-4">
-                        <div
-                            class="h-12 w-12 bg-blue-50 rounded-xl flex items-center justify-center mr-4 group-hover:bg-blue-100 transition-colors">
-                            <span class="text-2xl">❓</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-google-blue transition-colors">
-                            FAQ & Support
-                        </h3>
-                    </div>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Get answers to common questions about features, languages, and troubleshooting
-                    </p>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html#features"
+                    class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    Features
                 </a>
+                <a href="about.html" class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    About
+                </a>
+                <a href="resources.html" class="text-google-blue font-medium">
+                    Resources
+                </a>
+            </nav>
 
-                <!-- GitHub Link -->
-                <a href="https://github.com/TomMcLan/slide-buddy-apps-script" target="_blank"
-                    class="glass p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group block">
-                    <div class="flex items-center mb-4">
+            <div class="flex items-center space-x-4">
+                <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029" target="_blank"
+                    class="bg-google-blue hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-colors inline-block">
+                    Get Extension
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-20">
+            <div class="container mx-auto max-w-6xl px-6">
+                <div class="text-center">
+                    <div class="mx-auto mb-6 h-16 w-16 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <span class="text-4xl">📚</span>
+                    </div>
+
+                    <h1 class="font-display text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+                        Resources & Guides
+                    </h1>
+
+                    <p class="mx-auto max-w-2xl text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+                        Learn how to get the most out of Slide Buddy with our helpful guides on Google Slides
+                        translation and AI-powered features
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Articles Section -->
+        <section class="py-20 relative">
+            <div class="container mx-auto max-w-6xl px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Article 1: Installation Guide -->
+                    <a href="https://www.perplexity.ai/page/how-to-install-a-google-slides-zSYX1LeLQgqvxjSXnAZhAg"
+                        target="_blank"
+                        class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group block">
                         <div
-                            class="h-12 w-12 bg-gray-900 rounded-xl flex items-center justify-center mr-4 group-hover:bg-gray-800 transition-colors">
-                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            class="h-14 w-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-100 transition-colors">
+                            <span class="text-3xl">📥</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-google-blue transition-colors">
+                            How to Install a Google Slides Add-On
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Complete guide to installing Slide Buddy from the Google Workspace Marketplace. Get started
+                            in just 2 minutes.
+                        </p>
+                        <div class="flex items-center text-google-blue font-bold text-sm">
+                            Read Guide
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-google-blue transition-colors">
-                            GitHub Repository
+                    </a>
+
+                    <!-- Article 2: AI Translation -->
+                    <a href="https://www.perplexity.ai/page/ai-translation-for-google-slid-sdo5ycj9ScKfJBc9WNp6Yg"
+                        target="_blank"
+                        class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group block">
+                        <div
+                            class="h-14 w-14 bg-green-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-100 transition-colors">
+                            <span class="text-3xl">🤖</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-google-blue transition-colors">
+                            AI Translation for Google Slides
                         </h3>
-                    </div>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        View the open-source code, report bugs, and contribute to the project
-                    </p>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Discover how AI-powered translation works and why it's better than traditional methods for
+                            presentations.
+                        </p>
+                        <div class="flex items-center text-google-blue font-bold text-sm">
+                            Read Guide
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                    </a>
+
+                    <!-- Article 3: Translation Tutorial -->
+                    <a href="https://www.perplexity.ai/page/how-to-translate-google-slides-iJJR3SgvSB6R7_RDQKC9SA"
+                        target="_blank"
+                        class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group block">
+                        <div
+                            class="h-14 w-14 bg-yellow-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-100 transition-colors">
+                            <span class="text-3xl">🌍</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-google-blue transition-colors">
+                            How to Translate Google Slides
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Step-by-step tutorial on translating presentations with Slide Buddy. Support for 30+
+                            languages.
+                        </p>
+                        <div class="flex items-center text-google-blue font-bold text-sm">
+                            Read Guide
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Resources Section -->
+        <section class="py-20 relative">
+            <div class="container mx-auto max-w-6xl px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                        More Resources
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- FAQ Link -->
+                    <a href="index.html#support"
+                        class="glass p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group block">
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="h-12 w-12 bg-blue-50 rounded-xl flex items-center justify-center mr-4 group-hover:bg-blue-100 transition-colors">
+                                <span class="text-2xl">❓</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-google-blue transition-colors">
+                                FAQ & Support
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Get answers to common questions about features, languages, and troubleshooting
+                        </p>
+                    </a>
+
+                    <!-- GitHub Link -->
+                    <a href="https://github.com/TomMcLan/slide-buddy-apps-script" target="_blank"
+                        class="glass p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300 group block">
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="h-12 w-12 bg-gray-900 rounded-xl flex items-center justify-center mr-4 group-hover:bg-gray-800 transition-colors">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-google-blue transition-colors">
+                                GitHub Repository
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            View the open-source code, report bugs, and contribute to the project
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-google-blue to-blue-600">
+            <div class="container mx-auto max-w-4xl px-6 text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Ready to Get Started?
+                </h2>
+                <p class="text-xl mb-8 opacity-90">
+                    Install Slide Buddy and start translating in seconds
+                </p>
+                <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029" target="_blank"
+                    class="bg-white text-google-blue hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-lg inline-block">
+                    Get Started - It's Free
                 </a>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-google-blue to-blue-600">
-        <div class="container mx-auto max-w-4xl px-6 text-center text-white">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Get Started?
-            </h2>
-            <p class="text-xl mb-8 opacity-90">
-                Install Slide Buddy and start translating in seconds
-            </p>
-            <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029" target="_blank"
-                class="bg-white text-google-blue hover:bg-gray-100 px-8 py-3 rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-lg inline-block">
-                Get Started - It's Free
-            </a>
-        </div>
-    </section>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-16">
+    <footer class="bg-white text-gray-600 py-16 relative z-10">
         <div class="container mx-auto max-w-6xl px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <!-- Brand -->
                 <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center space-x-3 mb-4">
+                    <div class="flex items-center space-x-3 mb-6">
                         <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy" class="h-8 w-8 rounded">
-                        <span class="font-semibold text-lg text-white">Slide Buddy</span>
+                        <span class="font-bold text-xl text-gray-900">Slide Buddy</span>
                     </div>
-                    <p class="text-gray-400 max-w-md mb-4">
+                    <p class="text-gray-500 max-w-md mb-6 leading-relaxed">
                         The AI-powered Google Slides extension that helps you translate
                         presentations faster and easier than ever before.
                     </p>
@@ -199,44 +294,41 @@
 
                 <!-- Product -->
                 <div>
-                    <h3 class="text-white font-semibold mb-4">Product</h3>
-                    <ul class="space-y-2">
+                    <h3 class="text-gray-900 font-bold mb-6">Product</h3>
+                    <ul class="space-y-3">
                         <li><a href="index.html#features"
-                                class="text-gray-400 hover:text-white transition-colors">Features</a></li>
-                        <li><a href="index.html#demo" class="text-gray-400 hover:text-white transition-colors">Demo</a>
-                        </li>
+                                class="text-gray-500 hover:text-google-blue transition-colors">Features</a></li>
+                        <li><a href="index.html#demo"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Demo</a></li>
                         <li><a href="index.html#setup"
-                                class="text-gray-400 hover:text-white transition-colors">Setup</a></li>
+                                class="text-gray-500 hover:text-google-blue transition-colors">Setup</a></li>
                         <li><a href="resources.html"
-                                class="text-gray-400 hover:text-white transition-colors">Resources</a></li>
+                                class="text-gray-500 hover:text-google-blue transition-colors">Resources</a></li>
                         <li><a href="https://github.com/TomMcLan/slide-buddy-apps-script"
-                                class="text-gray-400 hover:text-white transition-colors" target="_blank">GitHub</a></li>
+                                class="text-gray-500 hover:text-google-blue transition-colors"
+                                target="_blank">GitHub</a></li>
                     </ul>
                 </div>
 
                 <!-- Legal -->
                 <div>
-                    <h3 class="text-white font-semibold mb-4">Legal</h3>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About
+                    <h3 class="text-gray-900 font-bold mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-500 hover:text-google-blue transition-colors">About
                                 Developer</a></li>
-                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy
-                                Policy</a></li>
-                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of
+                        <li><a href="privacy.html"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-500 hover:text-google-blue transition-colors">Terms of
                                 Service</a></li>
                         <li><a href="index.html#support"
-                                class="text-gray-400 hover:text-white transition-colors">Support</a></li>
+                                class="text-gray-500 hover:text-google-blue transition-colors">Support</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">
-                    © 2025 Slide Buddy. Making multilingual presentations effortless and FREE.
-                </p>
-                <p class="text-gray-400 text-sm mt-4 md:mt-0">
-                    Made with ❤️ for Google Slides users
-                </p>
+            <div class="border-t border-gray-200 pt-8 mt-12 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">© 2025 Slide Buddy. All rights reserved.</p>
+                <p class="text-sm text-gray-400 mt-2 md:mt-0">Not affiliated with Google.</p>
             </div>
         </div>
     </footer>
