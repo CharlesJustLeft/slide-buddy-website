@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XMKTSGZ3VC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XMKTSGZ3VC');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions (FAQ) - Slide Buddy</title>
+    <meta name="description"
+        content="Common questions about Slide Buddy. Learn about pricing, supported languages, security, and how to use the best free Google Slides translator.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/slide-buddy-logo.svg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://slidebuddy.app/qa">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://slidebuddy.app/qa">
+    <meta property="og:title" content="Frequently Asked Questions (FAQ) - Slide Buddy">
+    <meta property="og:description"
+        content="Common questions about Slide Buddy. Learn about pricing, supported languages, security, and how to use the best free Google Slides translator.">
+    <meta property="og:image" content="https://slidebuddy.app/assets/slide-buddy-logo.svg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://slidebuddy.app/qa">
+    <meta property="twitter:title" content="Frequently Asked Questions (FAQ) - Slide Buddy">
+    <meta property="twitter:description"
+        content="Common questions about Slide Buddy. Learn about pricing, supported languages, security, and how to use the best free Google Slides translator.">
+    <meta property="twitter:image" content="https://slidebuddy.app/assets/slide-buddy-logo.svg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'google': ['Google Sans', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'google-blue': '#1a73e8',
+                        'google-yellow': '#fbbc04',
+                        'google-red': '#ea4335',
+                        'google-green': '#34a853',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- JSON-LD Schema for FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is Slide Buddy free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Slide Buddy is 100% free to use. There are no subscription fees, hidden costs, or premium tiers. You can translate unlimited slides for free."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How do I translate a Google Slide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To translate a slide: 1. Install Slide Buddy from the Google Workspace Marketplace. 2. Open your presentation. 3. Go to Extensions > Slide Buddy > Open. 4. Select your target language. 5. Click 'Translate'."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does it preserve formatting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Slide Buddy uses advanced AI to translate text while keeping your original layout, fonts, colors, and images exactly where they are. It even handles text expansion for languages like French and Spanish."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What languages are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Slide Buddy supports over 30 languages, including English, Spanish, French, German, Portuguese, Italian, Chinese (Simplified & Traditional), Japanese, Korean, Russian, Arabic, Hebrew, and many more."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I translate speaker notes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Slide Buddy has a specific feature to translate speaker notes. Just check the 'Translate Speaker Notes' option before clicking Translate, and it will process both your slide content and your notes simultaneously."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is my data secure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Slide Buddy runs entirely within the Google Cloud infrastructure. We do not store your presentation content or personal data. Your text is sent securely to the translation API and returned directly to your slide."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How do I install Slide Buddy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can install Slide Buddy directly from the Google Workspace Marketplace. Just search for 'Slide Buddy' and click 'Install'."
+        }
+      }]
+    }
+    </script>
+</head>
+
+<body class="min-h-screen bg-white font-google">
+    <!-- Background Grid Pattern -->
+    <div class="grid-bg"></div>
+
+    <!-- 3D Background -->
+    <div id="canvas-container"></div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div class="container mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+            <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy Logo" class="h-8 w-8 rounded">
+                <span class="font-medium text-lg text-gray-900">Slide Buddy</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html#features"
+                    class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    Features
+                </a>
+                <a href="about.html" class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    About
+                </a>
+                <a href="resources.html" class="text-google-blue font-medium">
+                    Resources
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029" target="_blank"
+                    class="bg-google-blue hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-colors inline-block">
+                    Get Extension
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-12 pb-20">
+        <div class="container mx-auto max-w-4xl px-6">
+            <!-- Breadcrumb -->
+            <div class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+                <a href="index.html" class="hover:text-google-blue transition-colors">Home</a>
+                <span>/</span>
+                <span class="text-gray-900">Q&A</span>
+            </div>
+
+            <div class="text-center mb-16">
+                <h1 class="font-display text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+                    Frequently Asked Questions
+                </h1>
+                <p class="text-xl text-gray-600">
+                    Everything you need to know about Slide Buddy
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Is Slide Buddy free?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Yes, Slide Buddy is <strong>100% free</strong> to use. There are no subscription fees, hidden
+                        costs, or premium tiers. You can translate unlimited slides for free.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">How do I translate a Google Slide?</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        To translate a slide:
+                    </p>
+                    <ol class="list-decimal pl-5 space-y-2 text-gray-600">
+                        <li>Install Slide Buddy from the <a
+                                href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029"
+                                class="text-google-blue hover:underline">Google Workspace Marketplace</a>.</li>
+                        <li>Open your presentation.</li>
+                        <li>Go to <strong>Extensions > Slide Buddy > Open</strong>.</li>
+                        <li>Select your target language.</li>
+                        <li>Click <strong>Translate</strong>.</li>
+                    </ol>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Does it preserve formatting?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Yes! Slide Buddy uses advanced AI to translate text while keeping your original layout, fonts,
+                        colors, and images exactly where they are. It even handles text expansion for languages like
+                        French and Spanish to prevent overlapping.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">What languages are supported?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Slide Buddy supports over 30 languages, including English, Spanish, French, German, Portuguese,
+                        Italian, Chinese (Simplified & Traditional), Japanese, Korean, Russian, Arabic, Hebrew, and many
+                        more.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Can I translate speaker notes?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Yes, Slide Buddy has a specific feature to translate speaker notes. Just check the
+                        <strong>"Translate Speaker Notes"</strong> option before clicking Translate, and it will process
+                        both your slide content and your notes simultaneously. (See our guide on <a
+                            href="how-to-translate-speaker-notes-google-slides"
+                            class="text-google-blue hover:underline">translating speaker notes</a>).
+                    </p>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Is my data secure?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Absolutely. Slide Buddy runs entirely within the Google Cloud infrastructure. We do not store
+                        your presentation content or personal data. Your text is sent securely to the translation API
+                        and returned directly to your slide.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="bg-blue-50 border border-blue-100 rounded-2xl p-12 text-center mt-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Still have questions?</h3>
+                <p class="text-gray-600 mb-8">We're here to help.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:zuocharles00@gmail.com"
+                        class="inline-block bg-white text-google-blue border border-google-blue hover:bg-blue-50 px-8 py-3 rounded-full font-bold text-lg transition-all">
+                        Contact Support
+                    </a>
+                    <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029" target="_blank"
+                        class="inline-block bg-google-blue hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold text-lg transition-all shadow-lg">
+                        Install Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-gray-600 py-16 relative z-10 border-t border-gray-100">
+        <div class="container mx-auto max-w-6xl px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy" class="h-8 w-8 rounded">
+                        <span class="font-bold text-xl text-gray-900">Slide Buddy</span>
+                    </div>
+                    <p class="text-gray-500 max-w-md mb-6 leading-relaxed">
+                        The AI-powered Google Slides extension that helps you translate
+                        presentations faster and easier than ever before.
+                    </p>
+                </div>
+
+                <!-- Product -->
+                <div>
+                    <h3 class="text-gray-900 font-bold mb-6">Product</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#features"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Features</a></li>
+                        <li><a href="index.html#demo"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Demo</a></li>
+                        <li><a href="index.html#setup"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Setup</a></li>
+                        <li><a href="resources.html"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Resources</a></li>
+                        <li><a href="qa.html" class="text-google-blue font-medium">Q&A</a></li>
+                        <li><a href="https://github.com/TomMcLan/slide-buddy-apps-script"
+                                class="text-gray-500 hover:text-google-blue transition-colors"
+                                target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h3 class="text-gray-900 font-bold mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-500 hover:text-google-blue transition-colors">About
+                                Developer</a></li>
+                        <li><a href="privacy.html"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-500 hover:text-google-blue transition-colors">Terms of
+                                Service</a></li>
+                        <li><a href="index.html#support"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 pt-8 mt-12 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">© 2025 Slide Buddy. All rights reserved.</p>
+                <p class="text-sm text-gray-400 mt-2 md:mt-0">Not affiliated with Google.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
