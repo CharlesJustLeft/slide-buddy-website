@@ -2,156 +2,347 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XMKTSGZ3VC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XMKTSGZ3VC');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Google Slides Translators for RTL Languages (Arabic & Hebrew) - Slide Buddy</title>
     <meta name="description"
         content="Struggling with Arabic or Hebrew in Google Slides? Discover the best translators that handle Right-to-Left (RTL) formatting and layout mirroring perfectly.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/slide-buddy-logo.svg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://slidebuddy.app/best-google-slides-translators-rtl-arabic-hebrew">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://slidebuddy.app/best-google-slides-translators-rtl-arabic-hebrew">
-    <meta property="og:title"
-        content="Best Google Slides Translators for RTL Languages (Arabic & Hebrew) - Slide Buddy">
+    <meta property="og:title" content="Best Google Slides Translators for RTL Languages (Arabic & Hebrew)">
     <meta property="og:description"
         content="Struggling with Arabic or Hebrew in Google Slides? Discover the best translators that handle Right-to-Left (RTL) formatting and layout mirroring perfectly.">
-    <meta property="og:image" content="https://slidebuddy.app/assets/how-to-translate-cover.png">
+    <meta property="og:image" content="https://slidebuddy.app/assets/rtl-guide-cover.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://slidebuddy.app/best-google-slides-translators-rtl-arabic-hebrew">
-    <meta property="twitter:title"
-        content="Best Google Slides Translators for RTL Languages (Arabic & Hebrew) - Slide Buddy">
+    <meta property="twitter:title" content="Best Google Slides Translators for RTL Languages (Arabic & Hebrew)">
     <meta property="twitter:description"
         content="Struggling with Arabic or Hebrew in Google Slides? Discover the best translators that handle Right-to-Left (RTL) formatting and layout mirroring perfectly.">
-    <meta property="twitter:image" content="https://slidebuddy.app/assets/how-to-translate-cover.png">
+    <meta property="twitter:image" content="https://slidebuddy.app/assets/rtl-guide-cover.png">
 
-    <link rel="canonical" href="https://slidebuddy.app/best-google-slides-translators-rtl-arabic-hebrew">
-
-    <!-- Schema.org for Article -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Best Google Slides Translators for RTL Languages (Arabic & Hebrew)",
-      "image": "https://slidebuddy.app/assets/how-to-translate-cover.png",
-      "author": {
-        "@type": "Organization",
-        "name": "Slide Buddy Team"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Slide Buddy",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://slidebuddy.app/assets/icon128.png"
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'google': ['Google Sans', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'google-blue': '#1a73e8',
+                        'google-yellow': '#fbbc04',
+                        'google-red': '#ea4335',
+                        'google-green': '#34a853',
+                    }
+                }
+            }
         }
-      },
-      "datePublished": "2025-11-21",
-      "description": "Struggling with Arabic or Hebrew in Google Slides? Discover the best translators that handle Right-to-Left (RTL) formatting and layout mirroring perfectly."
-    }
     </script>
+
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="assets/icon128.png" alt="Slide Buddy Logo">
-                <span>Slide Buddy</span>
+<body class="min-h-screen bg-white font-google">
+    <!-- Background Grid Pattern -->
+    <div class="grid-bg"></div>
+
+    <!-- 3D Background -->
+    <div id="canvas-container"></div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div class="container mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+            <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy Logo" class="h-8 w-8 rounded">
+                <span class="font-medium text-lg text-gray-900">Slide Buddy</span>
             </a>
-            <div class="nav-links">
-                <a href="index.html#features">Features</a>
-                <a href="index.html#pricing">Pricing</a>
-                <a href="resources.html">Resources</a>
-                <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029"
-                    class="install-btn">Install for Free</a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html#features"
+                    class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    Features
+                </a>
+                <a href="about.html" class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    About
+                </a>
+                <a href="resources.html" class="text-google-blue font-medium">
+                    Resources
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029" target="_blank"
+                    class="bg-google-blue hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-colors inline-block">
+                    Get Extension
+                </a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <main class="blog-post">
-        <article>
-            <h1>Best Google Slides Translators for RTL Languages (Arabic & Hebrew)</h1>
-            <div class="post-meta">
-                <span class="date">November 21, 2025</span> • <span class="read-time">4 min read</span>
+    <main class="pt-12 pb-20">
+        <div class="container mx-auto max-w-6xl px-6">
+            <!-- Breadcrumb -->
+            <div class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+                <a href="resources.html" class="hover:text-google-blue transition-colors">Resources</a>
+                <span>/</span>
+                <span class="text-gray-900">Guides</span>
             </div>
 
-            <img src="assets/how-to-translate-cover.png" alt="RTL Translation in Google Slides" class="post-cover">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Sidebar (Table of Contents) -->
+                <aside class="hidden lg:block lg:col-span-3">
+                    <div class="sticky top-24">
+                        <h4 class="font-bold text-gray-900 mb-4 uppercase text-xs tracking-wider">Contents</h4>
+                        <nav class="space-y-3 border-l-2 border-gray-100 pl-4">
+                            <a href="#why-hard"
+                                class="block text-sm text-gray-600 hover:text-google-blue hover:border-l-2 hover:border-google-blue -ml-[18px] pl-[14px] transition-all">Why
+                                RTL is Hard</a>
+                            <a href="#what-to-look-for"
+                                class="block text-sm text-gray-600 hover:text-google-blue hover:border-l-2 hover:border-google-blue -ml-[18px] pl-[14px] transition-all">What
+                                to Look For</a>
+                            <a href="#top-tool"
+                                class="block text-sm text-gray-600 hover:text-google-blue hover:border-l-2 hover:border-google-blue -ml-[18px] pl-[14px] transition-all">Top
+                                Tool</a>
+                            <a href="#how-to"
+                                class="block text-sm text-gray-600 hover:text-google-blue hover:border-l-2 hover:border-google-blue -ml-[18px] pl-[14px] transition-all">How
+                                to Translate</a>
+                        </nav>
 
-            <div class="post-content">
-                <h2>Why RTL Translation is Hard</h2>
-                <p>If you've ever tried to copy-paste Arabic or Hebrew text into a standard Google Slide, you know the
-                    pain. Punctuation jumps to the wrong end of the line, bullet points stay on the left, and the text
-                    alignment fights you every step of the way.</p>
+                        <!-- Mini CTA -->
+                        <div class="mt-8 bg-blue-50 rounded-xl p-4">
+                            <p class="text-xs text-gray-600 mb-3 font-medium">Perfect RTL translation.</p>
+                            <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029"
+                                target="_blank"
+                                class="block w-full bg-google-blue hover:bg-blue-700 text-white text-center text-xs font-bold py-2 rounded-lg transition-colors">
+                                Install Free
+                            </a>
+                        </div>
+                    </div>
+                </aside>
 
-                <p>Right-to-Left (RTL) languages require more than just translation; they require <strong>layout
-                        mirroring</strong>. The entire logic of the slide needs to flip.</p>
+                <!-- Main Content -->
+                <article class="lg:col-span-8">
+                    <!-- Article Header -->
+                    <div class="mb-8">
+                        <h1 class="font-display text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+                            Best Google Slides Translators for RTL Languages (Arabic & Hebrew)
+                        </h1>
+                        <div class="flex items-center space-x-4 text-gray-500 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <div class="h-8 w-8 rounded-full bg-gray-200 overflow-hidden">
+                                    <div
+                                        class="h-full w-full flex items-center justify-center bg-google-blue text-white font-bold text-xs">
+                                        SB</div>
+                                </div>
+                                <span class="font-medium text-gray-900">Slide Buddy Team</span>
+                            </div>
+                            <span>•</span>
+                            <span>Nov 21, 2025</span>
+                            <span>•</span>
+                            <span>4 min read</span>
+                        </div>
+                    </div>
 
-                <h2>What to Look for in an RTL Translator</h2>
-                <ol>
-                    <li><strong>Text Alignment:</strong> Does it automatically switch text alignment to Right?</li>
-                    <li><strong>Layout Mirroring:</strong> Does it move the text box to the right side of the slide?
-                    </li>
-                    <li><strong>Font Support:</strong> Does it support fonts that render Arabic/Hebrew script clearly?
-                    </li>
-                    <li><strong>Punctuation Handling:</strong> Does it keep periods and question marks in the correct
-                        place?</li>
-                </ol>
+                    <!-- Featured Image -->
+                    <div class="mb-12 rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                        <img src="assets/rtl-guide-cover.png" alt="RTL Translation in Google Slides"
+                            class="w-full h-auto">
+                    </div>
 
-                <h2>Top Tool: Slide Buddy</h2>
-                <p>Slide Buddy was built with RTL support as a core feature, not an afterthought.</p>
-                <ul>
-                    <li><strong>Automatic Mirroring:</strong> When you translate to Arabic or Hebrew, Slide Buddy
-                        intelligently detects the direction and adjusts the text alignment and position.</li>
-                    <li><strong>Preserves Design:</strong> Your images and charts stay where they should, while the text
-                        flows naturally for RTL readers.</li>
-                    <li><strong>AI Accuracy:</strong> Uses advanced AI models to ensure the translation is contextually
-                        accurate, which is crucial for complex languages like Arabic.</li>
-                </ul>
+                    <!-- Content Body -->
+                    <div class="prose prose-lg prose-blue max-w-none text-gray-700 leading-relaxed">
+                        <h2 id="why-hard" class="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                            Why RTL Translation is Hard</h2>
 
-                <h2>How to Translate a Slide to Arabic with Slide Buddy</h2>
-                <ol>
-                    <li>Open your Google Slides presentation.</li>
-                    <li>Launch <strong>Slide Buddy</strong> from the Extensions menu.</li>
-                    <li>Select "Arabic" as your target language.</li>
-                    <li>Click "Translate".</li>
-                    <li>Watch as your slide is instantly converted, with perfect RTL formatting.</li>
-                </ol>
+                        <p>If you've ever tried to copy-paste Arabic or Hebrew text into a standard Google Slide, you
+                            know the pain. Punctuation jumps to the wrong end of the line, bullet points stay on the
+                            left, and the text alignment fights you every step of the way.</p>
 
-                <h2>Conclusion</h2>
-                <p>Don't let technical formatting issues distract from your message. Use a tool designed for the job.
-                    Slide Buddy ensures your Arabic and Hebrew presentations look just as professional as your English
-                    ones.</p>
+                        <p>Right-to-Left (RTL) languages require more than just translation; they require <strong>layout
+                                mirroring</strong>. The entire logic of the slide needs to flip.</p>
 
-                <div class="cta-container">
-                    <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029"
-                        class="cta-button">Try Slide Buddy for RTL</a>
-                </div>
+                        <h2 id="what-to-look-for" class="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                            What to Look for in an RTL Translator</h2>
+
+                        <ol class="list-decimal pl-6 space-y-2 mb-8">
+                            <li><strong>Text Alignment:</strong> Does it automatically switch text alignment to Right?
+                            </li>
+                            <li><strong>Layout Mirroring:</strong> Does it move the text box to the right side of the
+                                slide?</li>
+                            <li><strong>Font Support:</strong> Does it support fonts that render Arabic/Hebrew script
+                                clearly?</li>
+                            <li><strong>Punctuation Handling:</strong> Does it keep periods and question marks in the
+                                correct place?</li>
+                        </ol>
+
+                        <h2 id="top-tool" class="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                            Top Tool: Slide Buddy</h2>
+
+                        <p>Slide Buddy was built with RTL support as a core feature, not an afterthought.</p>
+                        <ul class="list-disc pl-6 space-y-2 mb-8">
+                            <li><strong>Automatic Mirroring:</strong> When you translate to Arabic or Hebrew, Slide
+                                Buddy intelligently detects the direction and adjusts the text alignment and position.
+                            </li>
+                            <li><strong>Preserves Design:</strong> Your images and charts stay where they should, while
+                                the text flows naturally for RTL readers.</li>
+                            <li><strong>AI Accuracy:</strong> Uses advanced AI models to ensure the translation is
+                                contextually accurate, which is crucial for complex languages like Arabic.</li>
+                        </ul>
+
+                        <h2 id="how-to" class="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                            How to Translate a Slide to Arabic with Slide Buddy</h2>
+
+                        <div class="space-y-4 mb-12">
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 h-8 w-8 bg-blue-100 text-google-blue rounded-full flex items-center justify-center font-bold mr-4 mt-1">
+                                    1</div>
+                                <div>
+                                    <p class="font-medium">Open your Google Slides presentation.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 h-8 w-8 bg-blue-100 text-google-blue rounded-full flex items-center justify-center font-bold mr-4 mt-1">
+                                    2</div>
+                                <div>
+                                    <p class="font-medium">Launch <strong>Slide Buddy</strong> from the Extensions menu.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 h-8 w-8 bg-blue-100 text-google-blue rounded-full flex items-center justify-center font-bold mr-4 mt-1">
+                                    3</div>
+                                <div>
+                                    <p class="font-medium">Select "Arabic" as your target language.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 h-8 w-8 bg-blue-100 text-google-blue rounded-full flex items-center justify-center font-bold mr-4 mt-1">
+                                    4</div>
+                                <div>
+                                    <p class="font-medium">Click "Translate".</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 h-8 w-8 bg-blue-100 text-google-blue rounded-full flex items-center justify-center font-bold mr-4 mt-1">
+                                    5</div>
+                                <div>
+                                    <p class="font-medium">Watch as your slide is instantly converted, with perfect RTL
+                                        formatting.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">Conclusion</h2>
+                        <p>Don't let technical formatting issues distract from your message. Use a tool designed for the
+                            job. Slide Buddy ensures your Arabic and Hebrew presentations look just as professional as
+                            your English ones.</p>
+
+                        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-8 text-center mt-12">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Try Slide Buddy for RTL</h3>
+                            <p class="text-gray-600 mb-8">Perfect layout mirroring in one click.</p>
+                            <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029"
+                                target="_blank"
+                                class="inline-block bg-google-blue hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
+                                Install Slide Buddy for Free
+                            </a>
+                        </div>
+
+                    </div>
+                </article>
             </div>
-        </article>
+        </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Slide Buddy</h4>
-                <p>The best AI translator for Google Slides.</p>
+    <!-- Footer -->
+    <footer class="bg-white text-gray-600 py-16 relative z-10 border-t border-gray-100">
+        <div class="container mx-auto max-w-6xl px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy" class="h-8 w-8 rounded">
+                        <span class="font-bold text-xl text-gray-900">Slide Buddy</span>
+                    </div>
+                    <p class="text-gray-500 max-w-md mb-6 leading-relaxed">
+                        The AI-powered Google Slides extension that helps you translate
+                        presentations faster and easier than ever before.
+                    </p>
+                </div>
+
+                <!-- Product -->
+                <div>
+                    <h3 class="text-gray-900 font-bold mb-6">Product</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#features"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Features</a></li>
+                        <li><a href="index.html#demo"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Demo</a></li>
+                        <li><a href="index.html#setup"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Setup</a></li>
+                        <li><a href="resources.html"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Resources</a></li>
+                        <li><a href="https://github.com/TomMcLan/slide-buddy-apps-script"
+                                class="text-gray-500 hover:text-google-blue transition-colors"
+                                target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h3 class="text-gray-900 font-bold mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-500 hover:text-google-blue transition-colors">About
+                                Developer</a></li>
+                        <li><a href="privacy.html"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-500 hover:text-google-blue transition-colors">Terms of
+                                Service</a></li>
+                        <li><a href="index.html#support"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Support</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Links</h4>
-                <a href="index.html">Home</a>
-                <a href="resources.html">Resources</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
+
+            <div class="border-t border-gray-200 pt-8 mt-12 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">© 2025 Slide Buddy. All rights reserved.</p>
+                <p class="text-sm text-gray-400 mt-2 md:mt-0">Not affiliated with Google.</p>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Slide Buddy. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
