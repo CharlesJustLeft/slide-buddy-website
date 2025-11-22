@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XMKTSGZ3VC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XMKTSGZ3VC');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Translation for Google Slides: Precise Control & Perfect Formatting</title>
+    <meta name="description"
+        content="Discover how AI translation tools for Google Slides offer precise control and preserve formatting, unlike traditional add-ons.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/slide-buddy-logo.svg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://slidebuddy.app/ai-translation-for-google-slides">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://slidebuddy.app/ai-translation-for-google-slides">
+    <meta property="og:title" content="AI Translation for Google Slides: Precise Control & Perfect Formatting">
+    <meta property="og:description"
+        content="Discover how AI translation tools for Google Slides offer precise control and preserve formatting, unlike traditional add-ons.">
+    <meta property="og:image" content="https://slidebuddy.app/assets/ai-translation-google-slides-cover.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://slidebuddy.app/ai-translation-for-google-slides">
+    <meta property="twitter:title" content="AI Translation for Google Slides: Precise Control & Perfect Formatting">
+    <meta property="twitter:description"
+        content="Discover how AI translation tools for Google Slides offer precise control and preserve formatting, unlike traditional add-ons.">
+    <meta property="twitter:image" content="https://slidebuddy.app/assets/ai-translation-google-slides-cover.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'google': ['Google Sans', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'google-blue': '#1a73e8',
+                        'google-yellow': '#fbbc04',
+                        'google-red': '#ea4335',
+                        'google-green': '#34a853',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="min-h-screen bg-white font-google">
+    <!-- Background Grid Pattern -->
+    <div class="grid-bg"></div>
+
+    <!-- 3D Background -->
+    <div id="canvas-container"></div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div class="container mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+            <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy Logo" class="h-8 w-8 rounded">
+                <span class="font-medium text-lg text-gray-900">Slide Buddy</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html#features"
+                    class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    Features
+                </a>
+                <a href="about.html" class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    About
+                </a>
+                <a href="resources.html" class="text-google-blue font-medium">
+                    Resources
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029" target="_blank"
+                    class="bg-google-blue hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-colors inline-block">
+                    Get Extension
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-12 pb-20">
+        <div class="container mx-auto max-w-6xl px-6">
+            <!-- Breadcrumb -->
+            <div class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+                <a href="resources.html" class="hover:text-google-blue transition-colors">Resources</a>
+                <span>/</span>
+                <span class="text-gray-900">Guides</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Sidebar (Table of Contents) -->
+                <aside class="hidden lg:block lg:col-span-3">
+                    <div class="sticky top-24">
+                        <h4 class="font-bold text-gray-900 mb-4 uppercase text-xs tracking-wider">Contents</h4>
+                        <nav class="space-y-3 border-l-2 border-gray-100 pl-4">
+                            <a href="#introduction"
+                                class="block text-sm text-gray-600 hover:text-google-blue hover:border-l-2 hover:border-google-blue -ml-[18px] pl-[14px] transition-all">Introduction</a>
+                            <a href="#why-ai"
+                                class="block text-sm text-gray-600 hover:text-google-blue hover:border-l-2 hover:border-google-blue -ml-[18px] pl-[14px] transition-all">Why
+                                We Need AI</a>
+                            <a href="#benefits"
+                                class="block text-sm text-gray-600 hover:text-google-blue hover:border-l-2 hover:border-google-blue -ml-[18px] pl-[14px] transition-all">Benefits
+                                of AI Translation</a>
+                            <a href="#problems"
+                                class="block text-sm text-gray-600 hover:text-google-blue hover:border-l-2 hover:border-google-blue -ml-[18px] pl-[14px] transition-all">Traditional
+                                Problems</a>
+                        </nav>
+
+                        <!-- Mini CTA -->
+                        <div class="mt-8 bg-blue-50 rounded-xl p-4">
+                            <p class="text-xs text-gray-600 mb-3 font-medium">Experience precise AI translation.</p>
+                            <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029"
+                                target="_blank"
+                                class="block w-full bg-google-blue hover:bg-blue-700 text-white text-center text-xs font-bold py-2 rounded-lg transition-colors">
+                                Install Slide Buddy
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <article class="lg:col-span-8">
+                    <!-- Article Header -->
+                    <div class="mb-8">
+                        <h1 class="font-display text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+                            AI Translation for Google Slides: Precise Control & Perfect Formatting
+                        </h1>
+                        <div class="flex items-center space-x-4 text-gray-500 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <div class="h-8 w-8 rounded-full bg-gray-200 overflow-hidden">
+                                    <div
+                                        class="h-full w-full flex items-center justify-center bg-google-blue text-white font-bold text-xs">
+                                        CZ</div>
+                                </div>
+                                <span class="font-medium text-gray-900">Charles Zuo</span>
+                            </div>
+                            <span>•</span>
+                            <span>Nov 21, 2025</span>
+                            <span>•</span>
+                            <span>3 min read</span>
+                        </div>
+                    </div>
+
+                    <!-- Featured Image -->
+                    <div class="mb-12 rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                        <img src="assets/ai-translation-google-slides-cover.png" alt="AI Translation for Google Slides"
+                            class="w-full h-auto">
+                    </div>
+
+                    <!-- Content Body -->
+                    <div class="prose prose-lg prose-blue max-w-none text-gray-700 leading-relaxed">
+                        <div id="introduction" class="scroll-mt-24">
+                            <p class="text-xl text-gray-600 mb-8">
+                                AI-powered translation tools are revolutionizing Google Slides workflows by replacing
+                                cumbersome manual processes and menu-driven interfaces with intuitive conversational
+                                commands that deliver instant, professionally formatted results.
+                            </p>
+
+                            <p class="mb-8">
+                                These advanced solutions eliminate the formatting destruction, rigid categorization, and
+                                time-consuming navigation that plague traditional translation add-ons, enabling users to
+                                translate entire presentations in seconds while preserving original layouts and
+                                providing granular control through natural language requests.
+                            </p>
+                        </div>
+
+                        <h2 id="why-ai" class="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                            Why We Need AI for Google Slides Translation</h2>
+
+                        <p class="mb-6">
+                            The fundamental limitations of traditional Google Slides translation tools create
+                            significant bottlenecks for users who need efficient multilingual presentation workflows:
+                        </p>
+
+                        <ul class="space-y-4 mb-8">
+                            <li>
+                                <strong>Lack of Granular Control (The Biggest Inefficiency):</strong> Traditional
+                                add-ons force users into rigid categories of "translate entire presentation," "single
+                                slide," or "selected text," without allowing nuanced control over specific elements like
+                                speaker notes only, image captions exclusively, or mixed-language presentations where
+                                certain sections should remain untranslated.
+                            </li>
+                            <li>
+                                <strong>Formatting and Layout Destruction:</strong> Existing translation tools
+                                frequently disrupt slide layouts, alter font sizes, shift text boxes, and distort visual
+                                elements, requiring extensive manual reformatting that can take longer than the original
+                                translation process.
+                            </li>
+                            <li>
+                                <strong>Clunky and Inflexible User Experience (UX):</strong> Users must navigate through
+                                dropdown menus containing over 100 languages, manually select translation scope
+                                repeatedly, and repeat this process for each translation task—creating unnecessary
+                                friction in workflows that demand speed and efficiency.
+                            </li>
+                        </ul>
+
+                        <h2 id="benefits" class="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">Benefits of
+                            AI Translation</h2>
+
+                        <p class="mb-6">
+                            AI-powered solutions address these pain points through intelligent automation and
+                            sophisticated understanding of user intent:
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-blue-50 p-6 rounded-xl">
+                                <h3 class="font-bold text-gray-900 mb-2">Precise Control</h3>
+                                <p class="text-sm">AI enables users to specify exactly what should be translated through
+                                    natural commands like "translate only bullet points" or "convert titles but keep
+                                    captions in English," providing the granular control that traditional tools lack.
+                                </p>
+                            </div>
+                            <div class="bg-blue-50 p-6 rounded-xl">
+                                <h3 class="font-bold text-gray-900 mb-2">Flawless Formatting</h3>
+                                <p class="text-sm">Advanced AI models preserve original layouts, fonts, spacing, and
+                                    visual integrity with remarkable precision, eliminating the hours typically spent on
+                                    post-translation cleanup work.</p>
+                            </div>
+                            <div class="bg-blue-50 p-6 rounded-xl md:col-span-2">
+                                <h3 class="font-bold text-gray-900 mb-2">Simple Natural Language Commands</h3>
+                                <p class="text-sm">Instead of navigating complex interfaces, users can simply type
+                                    conversational requests that AI processes instantly, transforming translation from a
+                                    technical task into an intuitive communication process.</p>
+                            </div>
+                        </div>
+
+                        <h2 id="problems" class="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">Traditional
+                            Translation Problems</h2>
+
+                        <p class="mb-6">
+                            Traditional Google Slides add-ons force users through cumbersome workflows that require
+                            scrolling through extensive language lists and manually specifying translation scope for
+                            each task—whether targeting individual slides, entire presentations, or specific text
+                            selections. These legacy tools frequently destroy original formatting, disrupting layouts,
+                            fonts, and visual elements, which forces users to spend hours reconstructing their carefully
+                            designed presentations after translation.
+                        </p>
+
+                        <p class="mb-8">
+                            The rigid, menu-driven interfaces of existing solutions like Slides Translator and Translate
+                            My Slide lack flexibility for nuanced requests, such as translating only speaker notes while
+                            preserving image captions or adapting content for specific cultural contexts. Professional
+                            translation services compound these problems by charging hundreds of dollars per
+                            presentation with slow turnaround times, making last-minute multilingual adaptations
+                            practically impossible for most users.
+                        </p>
+
+                        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-8 text-center mt-12">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Experience the AI Difference</h3>
+                            <p class="text-gray-600 mb-8">Try Slide Buddy for free and see how AI can transform your
+                                translation workflow.</p>
+                            <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029"
+                                target="_blank"
+                                class="inline-block bg-google-blue hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
+                                Install Slide Buddy for Free
+                            </a>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-gray-600 py-16 relative z-10 border-t border-gray-100">
+        <div class="container mx-auto max-w-6xl px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy" class="h-8 w-8 rounded">
+                        <span class="font-bold text-xl text-gray-900">Slide Buddy</span>
+                    </div>
+                    <p class="text-gray-500 max-w-md mb-6 leading-relaxed">
+                        The AI-powered Google Slides extension that helps you translate
+                        presentations faster and easier than ever before.
+                    </p>
+                </div>
+
+                <!-- Product -->
+                <div>
+                    <h3 class="text-gray-900 font-bold mb-6">Product</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#features"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Features</a></li>
+                        <li><a href="index.html#demo"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Demo</a></li>
+                        <li><a href="index.html#setup"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Setup</a></li>
+                        <li><a href="resources.html"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Resources</a></li>
+                        <li><a href="https://github.com/TomMcLan/slide-buddy-apps-script"
+                                class="text-gray-500 hover:text-google-blue transition-colors"
+                                target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h3 class="text-gray-900 font-bold mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-500 hover:text-google-blue transition-colors">About
+                                Developer</a></li>
+                        <li><a href="privacy.html"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-500 hover:text-google-blue transition-colors">Terms of
+                                Service</a></li>
+                        <li><a href="index.html#support"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 pt-8 mt-12 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">© 2025 Slide Buddy. All rights reserved.</p>
+                <p class="text-sm text-gray-400 mt-2 md:mt-0">Not affiliated with Google.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
