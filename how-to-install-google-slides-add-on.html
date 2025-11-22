@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XMKTSGZ3VC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XMKTSGZ3VC');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Install a Google Slides Add-On (Google Slides Translator) - Slide Buddy</title>
+    <meta name="description"
+        content="Learn how to install a Google Slides add-on like Slide Buddy in 4 easy steps. Enhance your presentations with AI translation tools.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/slide-buddy-logo.svg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://slidebuddy.app/how-to-install-google-slides-add-on">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://slidebuddy.app/how-to-install-google-slides-add-on">
+    <meta property="og:title" content="How to Install a Google Slides Add-On (Google Slides Translator)">
+    <meta property="og:description"
+        content="Learn how to install a Google Slides add-on like Slide Buddy in 4 easy steps. Enhance your presentations with AI translation tools.">
+    <meta property="og:image" content="https://slidebuddy.app/assets/how-to-install-cover.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://slidebuddy.app/how-to-install-google-slides-add-on">
+    <meta property="twitter:title" content="How to Install a Google Slides Add-On (Google Slides Translator)">
+    <meta property="twitter:description"
+        content="Learn how to install a Google Slides add-on like Slide Buddy in 4 easy steps. Enhance your presentations with AI translation tools.">
+    <meta property="twitter:image" content="https://slidebuddy.app/assets/how-to-install-cover.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'google': ['Google Sans', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'google-blue': '#1a73e8',
+                        'google-yellow': '#fbbc04',
+                        'google-red': '#ea4335',
+                        'google-green': '#34a853',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Vercel Analytics -->
+    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="min-h-screen bg-white font-google">
+    <!-- Background Grid Pattern -->
+    <div class="grid-bg"></div>
+
+    <!-- 3D Background -->
+    <div id="canvas-container"></div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div class="container mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+            <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy Logo" class="h-8 w-8 rounded">
+                <span class="font-medium text-lg text-gray-900">Slide Buddy</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html#features"
+                    class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    Features
+                </a>
+                <a href="about.html" class="text-gray-700 hover:text-google-blue transition-colors font-medium">
+                    About
+                </a>
+                <a href="resources.html" class="text-google-blue font-medium">
+                    Resources
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029" target="_blank"
+                    class="bg-google-blue hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-colors inline-block">
+                    Get Extension
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-12 pb-20">
+        <div class="container mx-auto max-w-6xl px-6">
+            <!-- Breadcrumb -->
+            <div class="flex items-center space-x-2 text-sm text-gray-500 mb-8">
+                <a href="resources.html" class="hover:text-google-blue transition-colors">Resources</a>
+                <span>/</span>
+                <span class="text-gray-900">Guides</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Sidebar (Table of Contents) -->
+                <aside class="hidden lg:block lg:col-span-3">
+                    <div class="sticky top-24">
+                        <h4 class="font-bold text-gray-900 mb-4 uppercase text-xs tracking-wider">Contents</h4>
+                        <nav class="space-y-3 border-l-2 border-gray-100 pl-4">
+                            <a href="#introduction"
+                                class="block text-sm text-gray-600 hover:text-google-blue hover:border-l-2 hover:border-google-blue -ml-[18px] pl-[14px] transition-all">Introduction</a>
+                            <a href="#step-1"
+                                class="block text-sm text-gray-600 hover:text-google-blue hover:border-l-2 hover:border-google-blue -ml-[18px] pl-[14px] transition-all">1.
+                                Get Add-ons</a>
+                            <a href="#step-2"
+                                class="block text-sm text-gray-600 hover:text-google-blue hover:border-l-2 hover:border-google-blue -ml-[18px] pl-[14px] transition-all">2.
+                                Access Marketplace</a>
+                            <a href="#step-3"
+                                class="block text-sm text-gray-600 hover:text-google-blue hover:border-l-2 hover:border-google-blue -ml-[18px] pl-[14px] transition-all">3.
+                                Install & Permit</a>
+                            <a href="#step-4"
+                                class="block text-sm text-gray-600 hover:text-google-blue hover:border-l-2 hover:border-google-blue -ml-[18px] pl-[14px] transition-all">4.
+                                Launch</a>
+                        </nav>
+
+                        <!-- Mini CTA -->
+                        <div class="mt-8 bg-blue-50 rounded-xl p-4">
+                            <p class="text-xs text-gray-600 mb-3 font-medium">Install Slide Buddy now.</p>
+                            <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029"
+                                target="_blank"
+                                class="block w-full bg-google-blue hover:bg-blue-700 text-white text-center text-xs font-bold py-2 rounded-lg transition-colors">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <article class="lg:col-span-8">
+                    <!-- Article Header -->
+                    <div class="mb-8">
+                        <h1 class="font-display text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+                            How to Install a Google Slides Add-On (Google Slides Translator)
+                        </h1>
+                        <div class="flex items-center space-x-4 text-gray-500 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <div class="h-8 w-8 rounded-full bg-gray-200 overflow-hidden">
+                                    <div
+                                        class="h-full w-full flex items-center justify-center bg-google-blue text-white font-bold text-xs">
+                                        CZ</div>
+                                </div>
+                                <span class="font-medium text-gray-900">Charles Zuo</span>
+                            </div>
+                            <span>•</span>
+                            <span>Nov 21, 2025</span>
+                            <span>•</span>
+                            <span>4 min read</span>
+                        </div>
+                    </div>
+
+                    <!-- Featured Image -->
+                    <div class="mb-12 rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                        <img src="assets/how-to-install-cover.png" alt="How to Install Google Slides Add-on"
+                            class="w-full h-auto">
+                    </div>
+
+                    <!-- Content Body -->
+                    <div class="prose prose-lg prose-blue max-w-none text-gray-700 leading-relaxed">
+                        <div id="introduction" class="scroll-mt-24">
+                            <p class="text-xl text-gray-600 mb-8">
+                                Installing add-ons in Google Slides can significantly enhance your presentation
+                                workflow,
+                                with tools like Slide Buddy offering specialized features such as translation
+                                capabilities while maintaining your original design and layout.
+                            </p>
+
+                            <p class="mb-8">
+                                The installation process involves accessing the Google Workspace Marketplace through the
+                                Extensions menu and granting necessary permissions for the add-on to function properly
+                                within your presentations.
+                            </p>
+                        </div>
+
+                        <h2 id="step-1" class="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                            1. Click "Get add-ons" in Google Slides
+                        </h2>
+
+                        <p class="mb-6">
+                            To begin, open any Google Slides presentation. In the top menu bar, click on
+                            <strong>Extensions</strong>, then hover over <strong>Add-ons</strong>, and finally select
+                            <strong>Get add-ons</strong>. This will open the Google Workspace Marketplace directly
+                            within your slide editor.
+                        </p>
+
+                        <div class="mb-8 rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                            <img src="assets/install-step-1-get-addons.png" alt="Step 1: Click Get add-ons"
+                                class="w-full h-auto">
+                        </div>
+
+                        <h2 id="step-2" class="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                            2. Access Google Workspace Marketplace
+                        </h2>
+
+                        <p class="mb-6">
+                            The <a
+                                href="https://workspace.google.com/marketplace/app/slide_buddy_%E2%80%93_free_ai_translator/859890262029"
+                                target="_blank" class="text-google-blue hover:underline">Google Workspace
+                                Marketplace</a> serves as your gateway to enhancing Google Slides with specialized
+                            add-ons like Slide Buddy. Once accessed, you can browse categories or use the search
+                            functionality to locate specific tools that meet your presentation needs, transforming your
+                            slides beyond the standard features offered by Google's native platform.
+                        </p>
+
+                        <div class="mb-8 rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                            <img src="assets/install-step-2-marketplace.png" alt="Step 2: Google Workspace Marketplace"
+                                class="w-full h-auto">
+                        </div>
+
+                        <h2 id="step-3" class="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                            3. Install Add-On and Grant Permission
+                        </h2>
+
+                        <p class="mb-6">
+                            Once the Google Workspace Marketplace opens, use the search bar to type "Slide Buddy" and
+                            press Enter to locate the official add-on listing. The search results will display the Slide
+                            Buddy add-on along with its description, ratings, and developer information, making it easy
+                            to identify the correct tool among similar options.
+                        </p>
+
+                        <p class="mb-6">
+                            Click the <strong>Install</strong> button on the Slide Buddy listing to begin the
+                            installation process. The system will prompt you to review the add-on's functionality and
+                            prepare for the permission-granting phase, which ensures the tool can properly access your
+                            presentation content to perform its translation and localization features while preserving
+                            your slide layouts and visual elements.
+                        </p>
+
+                        <div class="mb-8 rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                            <img src="assets/install-step-3-install.png" alt="Step 3: Install Button"
+                                class="w-full h-auto">
+                        </div>
+
+                        <p class="mb-6">
+                            During the installation process, Google will display a permissions dialog that outlines what
+                            access Slide Buddy requires to function effectively. The add-on needs authorization to read,
+                            edit, and modify your presentation content, which enables it to perform translations while
+                            maintaining your original slide layouts and preserving visual assets like images, charts,
+                            and formatting.
+                        </p>
+
+                        <p class="mb-8">
+                            Review the requested permissions carefully, then click <strong>Allow</strong> to grant Slide
+                            Buddy the necessary access rights. These permissions are essential for the add-on to analyze
+                            your presentation content, apply translations, and ensure that the translated text maintains
+                            proper formatting and positioning within your existing slide design framework.
+                        </p>
+
+                        <h2 id="step-4" class="text-2xl font-bold text-gray-900 mt-12 mb-6 scroll-mt-24">
+                            4. Launch Add-On
+                        </h2>
+
+                        <p class="mb-6">
+                            After completing the installation and permission process, return to your Google Slides
+                            presentation to begin using the newly installed tool. Access the add-on by selecting
+                            <strong>Extensions → Slide Buddy</strong> from the top menu bar, which will activate the
+                            translation interface.
+                        </p>
+
+                        <p class="mb-8">
+                            A dedicated sidebar will appear on the right side of your presentation screen, providing an
+                            intuitive workspace for managing translations directly within your slides. This sidebar
+                            interface allows you to select specific text elements or entire slides for translation,
+                            giving you precise control over which content gets localized.
+                        </p>
+
+                        <div class="mb-8 rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                            <img src="assets/install-step-4-launch.png" alt="Step 4: Launch Add-on"
+                                class="w-full h-auto">
+                        </div>
+
+                        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-8 text-center mt-12">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to Translate?</h3>
+                            <p class="text-gray-600 mb-8">Install Slide Buddy now and experience AI-powered translation.
+                            </p>
+                            <a href="https://workspace.google.com/marketplace/app/slide_buddy/859890262029"
+                                target="_blank"
+                                class="inline-block bg-google-blue hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
+                                Install Slide Buddy for Free
+                            </a>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-gray-600 py-16 relative z-10 border-t border-gray-100">
+        <div class="container mx-auto max-w-6xl px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="assets/slide-buddy-logo.svg" alt="Slide Buddy" class="h-8 w-8 rounded">
+                        <span class="font-bold text-xl text-gray-900">Slide Buddy</span>
+                    </div>
+                    <p class="text-gray-500 max-w-md mb-6 leading-relaxed">
+                        The AI-powered Google Slides extension that helps you translate
+                        presentations faster and easier than ever before.
+                    </p>
+                </div>
+
+                <!-- Product -->
+                <div>
+                    <h3 class="text-gray-900 font-bold mb-6">Product</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#features"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Features</a></li>
+                        <li><a href="index.html#demo"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Demo</a></li>
+                        <li><a href="index.html#setup"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Setup</a></li>
+                        <li><a href="resources.html"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Resources</a></li>
+                        <li><a href="https://github.com/TomMcLan/slide-buddy-apps-script"
+                                class="text-gray-500 hover:text-google-blue transition-colors"
+                                target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h3 class="text-gray-900 font-bold mb-6">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-500 hover:text-google-blue transition-colors">About
+                                Developer</a></li>
+                        <li><a href="privacy.html"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-500 hover:text-google-blue transition-colors">Terms of
+                                Service</a></li>
+                        <li><a href="index.html#support"
+                                class="text-gray-500 hover:text-google-blue transition-colors">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 pt-8 mt-12 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">© 2025 Slide Buddy. All rights reserved.</p>
+                <p class="text-sm text-gray-400 mt-2 md:mt-0">Not affiliated with Google.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
