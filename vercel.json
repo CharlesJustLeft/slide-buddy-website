@@ -30,6 +30,11 @@
       "source": "/index.html",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/google-slides-translation-extensions-comparison",
+      "destination": "/best-free-google-slides-translation-extensions",
+      "permanent": true
     }
   ],
   "cleanUrls": true
