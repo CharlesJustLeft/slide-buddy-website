@@ -2,81 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://slidebuddy.app/</loc>
-    <lastmod>2025-10-20</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://slidebuddy.app/about.html</loc>
-    <lastmod>2025-10-20</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slidebuddy.app/privacy.html</loc>
-    <lastmod>2025-10-20</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://slidebuddy.app/terms.html</loc>
-    <lastmod>2025-10-20</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://slidebuddy.app/resources.html</loc>
-    <lastmod>2025-11-20</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slidebuddy.app/how-to-translate-google-slides</loc>
-    <lastmod>2025-11-20</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slidebuddy.app/best-free-google-slides-translation-extensions</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slidebuddy.app/slide-buddy-vs-translate-my-slide</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slidebuddy.app/ai-translation-for-google-slides</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slidebuddy.app/how-to-install-google-slides-add-on</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slidebuddy.app/how-to-translate-google-slides-to-another-language</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slidebuddy.app/best-google-slides-translators-rtl-arabic-hebrew</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://slidebuddy.app/how-to-translate-speaker-notes-google-slides</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://slidebuddy.app/qa.html</loc>
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
